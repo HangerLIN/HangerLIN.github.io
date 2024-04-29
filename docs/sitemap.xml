@@ -2,6 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://hangerlin.github.io/high-performance-architecture/%E6%9C%AA%E5%91%BD%E5%90%8D/</loc><lastmod>2024-04-29T14:00:32&#43;08:00</lastmod></url><url>
             <loc>https://hangerlin.github.io/high-performance-architecture/</loc><lastmod>2024-04-29T14:00:32&#43;08:00</lastmod></url><url>
             <loc>https://hangerlin.github.io/</loc><lastmod>2024-04-29T14:00:32&#43;08:00</lastmod></url><url>
             <loc>https://hangerlin.github.io/juc-exploration/</loc><lastmod>2024-04-28T17:43:19&#43;08:00</lastmod></url><url>

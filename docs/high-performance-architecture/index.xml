@@ -8,14 +8,21 @@
     <language>zh-CN</language>
     <managingEditor>hangerlin@163.com (HangerLin 林廷翰)</managingEditor>
     <webMaster>hangerlin@163.com (HangerLin 林廷翰)</webMaster>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Apr 2024 14:00:32 +0800</lastBuildDate>
     <atom:link href="https://hangerlin.github.io/high-performance-architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>（一）高效异步：利用消息队列优化大规模Excel文件下载</title>
+      <link>https://hangerlin.github.io/high-performance-architecture/%E6%9C%AA%E5%91%BD%E5%90%8D/</link>
+      <pubDate>Mon, 29 Apr 2024 14:00:32 +0800</pubDate><author>hangerlin@163.com (HangerLin 林廷翰)</author>
+      <guid>https://hangerlin.github.io/high-performance-architecture/%E6%9C%AA%E5%91%BD%E5%90%8D/</guid>
+      <description>1. 前言 2. 系统架构概览 本节将概述本系统的主要组成部分，包括客户端、服务器、消息队列（RabbitMQ）和文件存储系统（Minio），并深入探讨</description>
+    </item>
     <item>
       <title></title>
       <link>https://hangerlin.github.io/high-performance-architecture/excel%E4%B8%8A%E4%BC%A0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hangerlin@163.com (HangerLin 林廷翰)</author>
       <guid>https://hangerlin.github.io/high-performance-architecture/excel%E4%B8%8A%E4%BC%A0/</guid>
-      <description>高性能架构之道：实战高性能在线教育平台设计 +++ title = &amp;lsquo;高效异步：利用消息队列优化大规模Excel文件下载&amp;rsquo; date = 2024-04-29T14:00:32+08:00 draft = true +++</description>
+      <description>高性能架构之道：实战高性能在线教育平台设计 +++ title = &amp;ldquo;高性能架构之道：实战高性能在线教育平台设计&amp;rdquo; date = &amp;ldquo;2024-04-29T14:00:32+08:00&amp;rdquo; draft = true +++ （一）高</description>
     </item>
     <item>
       <title></title>
