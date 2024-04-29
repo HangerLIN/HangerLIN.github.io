@@ -1,0 +1,12 @@
+[submodule "themes/typo"]
+	path = themes/typo
+	url = git@github.com:tomfran/typo.git
+[submodule "themes/wowchemy"]
+	path = themes/wowchemy
+	url = https://github.com/wowchemy/wowchemy-hugo-modules.git
+[submodule "themes/hugo-book"]
+	path = themes/hugo-book
+	url = https://github.com/alex-shpak/hugo-book
+[submodule "themes/LoveIt"]
+	path = themes/LoveIt
+	url = https://github.com/dillonzq/LoveIt.git

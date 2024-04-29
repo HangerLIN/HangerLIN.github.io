@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>My First Post - 欢迎来到 Hanger 的技术博客</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:url" content="http://localhost:1313/high-performance-architecture/my-first-post/">
+  <meta property="og:site_name" content="欢迎来到 Hanger 的技术博客">
+  <meta property="og:title" content="My First Post">
+  <meta property="og:description" content="高性能架构之道：实战高性能在线教育平台设计 对于这个系列的书名，可以选择以下几个备选项，都是针对高性能在线教育平台的后端设计，并突出使用消息队">
+  <meta property="og:locale" content="zh-CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="high-performance-architecture">
+    <meta property="article:published_time" content="2024-04-28T18:58:06+08:00">
+    <meta property="article:modified_time" content="2024-04-28T18:58:06+08:00">
+    <meta property="og:image" content="http://localhost:1313/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://localhost:1313/logo.png"><meta name="twitter:title" content="My First Post">
+<meta name="twitter:description" content="高性能架构之道：实战高性能在线教育平台设计 对于这个系列的书名，可以选择以下几个备选项，都是针对高性能在线教育平台的后端设计，并突出使用消息队">
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#fffff0"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/high-performance-architecture/my-first-post/" /><link rel="prev" href="http://localhost:1313/high-performance-architecture/my-first-article/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "My First Post",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/high-performance-architecture\/my-first-post\/"
+        },"genre": "high-performance-architecture","wordcount":  10136 ,
+        "url": "http:\/\/localhost:1313\/high-performance-architecture\/my-first-post\/","datePublished": "2024-04-28T18:58:06+08:00","dateModified": "2024-04-28T18:58:06+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "HangerLin 林廷翰"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="欢迎来到 Hanger 的技术博客"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//images20240428191402.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//images20240428191402.png, https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//images20240428191402.png 1.5x, https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//images20240428191402.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//images20240428191402.png"
+        title="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//images20240428191402.png" /></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/high-performance-architecture/"> 高性能架构之道 </a><a class="menu-item" href="/juc-exploration/"> JUC底层探秘 </a><a class="menu-item" href="/system-design/"> 系统设计之美 </a><a class="menu-item" href="/online-issues/"> 线上问题迷云 </a><a class="menu-item" href="/"> 主页 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="欢迎来到 Hanger 的技术博客"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//images20240428191402.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//images20240428191402.png, https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//images20240428191402.png 1.5x, https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//images20240428191402.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//images20240428191402.png"
+        title="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//images20240428191402.png" /></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/high-performance-architecture/" title="">高性能架构之道</a><a class="menu-item" href="/juc-exploration/" title="">JUC底层探秘</a><a class="menu-item" href="/system-design/" title="">系统设计之美</a><a class="menu-item" href="/online-issues/" title="">线上问题迷云</a><a class="menu-item" href="/" title="">主页</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster">My First Post</h1><div class="content" id="content"><h1 id="高性能架构之道实战高性能在线教育平台设计"><strong>高性能架构之道：实战高性能在线教育平台设计</strong></h1>
+<p>对于这个系列的书名，可以选择以下几个备选项，都是针对高性能在线教育平台的后端设计，并突出使用消息队列异步实现流量削峰的主题：</p>
+<ol>
+<li><strong>异步高效：使用消息队列优化在线教育平台的Excel文件处理</strong></li>
+<li><strong>高并发下的文件管理：消息队列在Excel上传下载中的应用</strong></li>
+<li><strong>消息队列技术与文件处理：在线教育平台的高性能实现</strong></li>
+<li><strong>流量削峰的艺术：通过消息队列优化Excel文件的上传与下载</strong></li>
+<li><strong>后端架构新篇章：消息队列在高负载Excel处理场景中的角色</strong></li>
+</ol>
+<h3 id="上集处理excel文件的下载">上集：处理Excel文件的下载</h3>
+<h4 id="1-引言">1. 引言</h4>
+<ul>
+<li>简介：介绍文章的背景和重要性。</li>
+<li>目标：解释为什么使用消息队列来处理Excel文件的下载可以优化性能和用户体验。</li>
+</ul>
+<h4 id="2-系统架构概览">2. 系统架构概览</h4>
+<ul>
+<li>描述整体系统架构，包括客户端、服务器、消息队列（如RabbitMQ）和文件存储系统（如Minio）。</li>
+</ul>
+<h4 id="3-消息队列的作用和优势">3. 消息队列的作用和优势</h4>
+<ul>
+<li>解释消息队列在异步处理中的角色。</li>
+<li>讨论使用消息队列可以如何帮助处理高并发场景下的文件下载请求。</li>
+</ul>
+<h4 id="4-实现文件下载的详细步骤">4. 实现文件下载的详细步骤</h4>
+<ul>
+<li>描述接收文件下载请求的流程。</li>
+<li>说明如何将下载任务发送到消息队列。</li>
+<li>展示如何从队列中获取任务并处理。</li>
+</ul>
+<h4 id="5-文件存储和管理">5. 文件存储和管理</h4>
+<ul>
+<li>介绍文件如何在Minio等对象存储服务中管理。</li>
+<li>讨论文件命名、存取安全和数据一致性问题。</li>
+</ul>
+<h4 id="6-性能优化策略">6. 性能优化策略</h4>
+<ul>
+<li>描述针对文件下载过程的优化措施，例如缓存策略、加载平衡等。</li>
+</ul>
+<h4 id="7-错误处理和日志记录">7. 错误处理和日志记录</h4>
+<ul>
+<li>讨论如何处理下载过程中可能出现的错误。</li>
+<li>说明日志记录对于监控和调试的重要性。</li>
+</ul>
+<h4 id="8-结论">8. 结论</h4>
+<ul>
+<li>总结消息队列在处理大规模文件下载中的优点。</li>
+<li>提出可能的改进方向。</li>
+</ul>
+<h3 id="2-系统架构概览-1">2. 系统架构概览</h3>
+<p>本节将概述本系统的主要组成部分，包括客户端、服务器、消息队列（RabbitMQ）和文件存储系统（Minio），并深入探讨消息队列的设计及其在系统中的实际应用。</p>
+<ul>
+<li>
+<p><strong>客户端</strong>：用户界面，用于提交文件下载或上传请求。对接RabbitMQ，客户端的Service层调用rabbitMQ的MessageSender中的封装好的send方法，使用异步的消息发送。</p>
+</li>
+<li>
+<p><strong>服务器</strong>：核心处理单元，接收来自客户端的请求，执行必要的业务逻辑处理，并与消息队列和文件存储系统交互。服务器在这个架构中扮演调度者的角色，确保数据的正确流转及有效处理。</p>
+</li>
+<li>
+<p><strong>消息队列（RabbitMQ）</strong>：作为系统的中枢神经，负责接收、存储并转发消息。通过使用RabbitMQ，系统能够异步处理来自客户端的众多请求，有效分散高峰流量，减轻服务器的即时处理压力。</p>
+</li>
+<li>
+<p><strong>文件存储系统（Minio）</strong>：Minio是一个高性能的对象存储引擎，用于存储和管理上传的文件及处理后的文件。在本处，Excel文件的上传下载文件的过程中，Minio存储Excel各种文件的父模板，也寄存着各种转换成功的Excel文件。</p>
+</li>
+</ul>
+<h4 id="21-消息队列在本系统中的设计">2.1 消息队列在本系统中的设计</h4>
+<p>在本系统中，消息队列的设计和实现是通过两个核心类<code>MessageSender</code>和<code>MessageReceiver</code>完成的，这两个类通过RabbitMQ交换消息，实现了系统内各组件间的解耦和异步通信。</p>
+<ol>
+<li><strong>发送普通消息</strong> (<code>send</code> 方法)：
+<ul>
+<li>消息发送至 <code>queue1</code>，包含普通文本信息，用于系统内基本的通信需求。</li>
+<li>消息接收由 <code>MessageReceiver</code> 类中的 <code>process</code> 方法处理，该方法监听 <code>queue1</code>。</li>
+</ul>
+</li>
+<li><strong>发送数据导出请求</strong> (<code>sendExportMsg</code> 方法)：
+<ul>
+<li>发送至 <code>queue4</code>，此队列处理包含具体数据和类型信息的复杂JSON对象，用于数据导出任务。</li>
+<li>消息的接收和处理通过 <code>MessageReceiver</code> 中的 <code>processExportData</code> 方法完成，它监听 <code>queue3</code> 和 <code>queue4</code>。</li>
+</ul>
+</li>
+<li><strong>发送系统消息</strong> (<code>sendSystemMsg</code> 方法)：
+<ul>
+<li>用于发送系统级别的通知或警告，发送至 <code>queue5</code>。</li>
+<li>对应的接收处理由 <code>MessageReceiver</code> 中的 <code>processSystemMsg</code> 方法完成，专门监听 <code>queue5</code>。</li>
+</ul>
+</li>
+<li><strong>发送导入数据请求</strong> (<code>sendImportMsg</code> 方法)：
+<ul>
+<li>发送至 <code>queue6</code>，处理与文件上传相关的操作请求。</li>
+<li><code>MessageReceiver</code> 类中的 <code>processImportData</code> 方法负责接收此队列消息，进行文件上传后的数据处理。</li>
+</ul>
+</li>
+<li><strong>发送CDN操作消息</strong> (<code>send</code> 方法用于 CDN)：
+<ul>
+<li>特定于CDN操作的消息发送至 <code>cdn_queue1</code>，用于处理与内容分发网络相关的任务。</li>
+</ul>
+</li>
+</ol>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD
+    subgraph 客户端
+    Client[(&#34;客户端\n(Web/桌面应用)&#34;)]
+    end
+
+    subgraph 服务器
+    Server[(&#34;核心服务器&#34;)]
+    end
+
+    subgraph 消息队列系统
+    MQ[RabbitMQ]
+    Q1[(&#34;queue1\n普通消息&#34;)]
+    Q4[(&#34;queue3，4\n数据导出&#34;)]
+    Q5[(&#34;queue5\n系统消息&#34;)]
+    Q6[(&#34;queue6\n导入数据&#34;)]
+    CDNQ[(&#34;cdn_queue1\nCDN操作&#34;)]
+    end
+
+    subgraph 文件存储系统
+    Storage[Minio]
+    end
+
+    Client --&gt;|发送请求| Server
+    Server --&gt;|委托消息| MQ
+    MQ --&gt;|分发消息| Q1
+    MQ --&gt;|分发消息| Q4
+    MQ --&gt;|分发消息| Q5
+    MQ --&gt;|分发消息| Q6
+    MQ --&gt;|分发消息| CDNQ
+    Server --&gt;|其中对应的文件操作| Storage
+
+    Q1 --&gt;|处理| Server
+    Q4 --&gt;|处理| Server
+    Q5 --&gt;|处理| Server
+    Q6 --&gt;|处理| Server
+    CDNQ --&gt;|处理| Server
+
+    classDef default fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef queue fill:#ccf,stroke:#333,stroke-width:2px;
+    class Client,Server,MQ,Storage default;
+    class Q1,Q4,Q5,Q6,CDNQ queue;
+</code></pre><p>迫于篇幅位置所限，笔者只讨论文件上传，下载的具体实现。</p>
+<p><a href="https://chat.openai.com/c/3fb2519d-db5e-4cca-a686-8ccfab7b86d1" target="_blank" rel="noopener noreffer ">https://chat.openai.com/c/3fb2519d-db5e-4cca-a686-8ccfab7b86d1</a></p>
+<h4 id="22-minio文件存储">2.2 Minio文件存储</h4>
+<p>在现代软件应用中，有效的文件管理是关键功能之一，尤其是在依赖对象存储服务进行文件存储的场景下。</p>
+<p>在本高性能教育平台的设计中，笔者选择开源的<strong>Minio</strong>作为存储解决方案，用户可以享受到显著的灵活性和成本效益，因为它允许自托管且完全兼容Amazon S3 API，减少了依赖于第三方服务提供商，如阿里云OSS的必要。</p>
+<p>与此同时，阿里云OSS虽然提供稳定的服务支持，但可能带来增长的费用和服务依赖性，特别是在数据访问频繁或政策和服务变动时，可能导致成本增加和迁移难度。</p>
+<p>通过Minio，组织可以更好地控制数据存储和管理策略，避免了供应商锁定，同时降低了长期的运营成本。接下来，笔者将详细讲解在数据库中如何存储文件的相对地址，文件在Minio中如何管理，以及文件上传的完整流程，以充分利用Minio带来的这些优势。</p>
+<p>对于不熟悉Minio或类似对象存储服务的读者来说，理解其存储架构的不同层级可能初看起来略显复杂。为了帮助大家更好地掌握这一点，接下来的部分将通过详细的代码示例展示文件的上传和下载过程。<strong>在此过程中，我们将重点讲解三个核心概念：“桶（Bucket）”，“子目录（Subdirectory）”，以及“文件名（Filename）”。</strong></p>
+<p>这三个概念在Minio的存储结构中扮演着至关重要的角色。笔者先详细讲讲这三个概念，而且他们是怎么在Minio存储中起到作用的。</p>
+<p>笔者的设计图如下：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD;
+    Bucket1 --&gt; SubDirectory1[Subdirectory: 学籍数据]
+    Bucket1 --&gt; SubDirectory2[Subdirectory: 成绩数据]
+    Bucket1 --&gt; SubDirectory3[Subdirectory: 考试教师信息导出]
+    
+    SubDirectory1 --&gt; File1[File: student_record_20220401.xlsx]
+    SubDirectory1 --&gt; File2[File: student_record_20220402.xlsx]
+    
+    SubDirectory2 --&gt; File3[File: grade_report_20220301.xlsx]
+    SubDirectory2 --&gt; File4[File: grade_report_20220302.xlsx]
+    
+    SubDirectory3 --&gt; File5[File: exam_teachers_20230101.xlsx]
+    SubDirectory3 --&gt; File6[File: exam_teachers_20230102.xlsx]
+</code></pre><h5 id="1-桶bucket">1. 桶（Bucket）</h5>
+<p>在Minio以及其他对象存储系统中，桶是最顶层的数据容器，类似于文件系统中的“根目录”或数据库中的“数据库实例”。每个桶可以包含任意数量的对象（文件），并且桶内的对象通过唯一的键（即文件名和路径）来访问，而这个键由“子目录”和“文件名”构成。</p>
+<h5 id="2-子目录subdirectory">2. 子目录（Subdirectory）</h5>
+<p>虽然Minio是一个扁平的存储结构，没有真正的文件夹或目录概念，但可以通过在对象键中使用斜杠（/）来模拟目录结构。这种方式允许用户在逻辑上组织和管理文件，使得文件的存取更加直观。</p>
+<h5 id="3-文件名filename">3. 文件名（Filename）</h5>
+<p>文件名在Minio中是<strong>唯一标识一个对象的键</strong>，通常会包含实际的文件名以及模拟的目录路径。在Minio中，完整的对象键由子目录和文件名组成，如“subdirectory/filename”。</p>
+<h5 id="实例应用">实例应用</h5>
+<p>在提供的代码示例中，有以下使用方式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>String bucketName <span style="color:#f92672">=</span> MinioBucketEnum.<span style="color:#a6e22e">DATA_DOWNLOAD_EXAM_THEACHER</span>.<span style="color:#a6e22e">getBucketName</span>();
+</span></span><span style="display:flex;"><span>String subDirectory <span style="color:#f92672">=</span> MinioBucketEnum.<span style="color:#a6e22e">DATA_DOWNLOAD_EXAM_THEACHER</span>.<span style="color:#a6e22e">getSubDirectory</span>();
+</span></span><span style="display:flex;"><span>String fileName <span style="color:#f92672">=</span> subDirectory <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#f92672">+</span> username <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;_&#34;</span> <span style="color:#f92672">+</span> currentDateTime <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;_examTeachersData.xlsx&#34;</span>;
+</span></span></code></pre></div><p><code>bucketName</code> 指定了数据将存储在哪个桶中，这个桶可以独立于其他桶进行管理和权限设置。<code>subDirectory</code> 用于在这个桶内逻辑上组织数据，而 <code>fileName</code> 包括了路径信息和实际的文件名，使得文件在桶中的位置清晰明确。</p>
+<h3 id="3-实现文件下载的详细调用链">3. 实现文件下载的详细调用链</h3>
+<h4 id="31-消息发送">3.1 消息发送</h4>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    subgraph controllers [&#34;Controllers&#34;]
+        PaymentInfoController -- &#34;sendExportMsg\n(导出缴费信息)&#34; --&gt; MessageSender
+        CourseExamInfoController -- &#34;sendExportMsg\n(导出机考名单)&#34; --&gt; MessageSender
+        ClassInformationController -- &#34;sendExportMsg\n(导出班级信息)&#34; --&gt; MessageSender
+        StudentStatusController -- &#34;sendExportMsg\n(导出学生状态)&#34; --&gt; MessageSender
+        ScoreInformationController -- &#34;sendExportMsg\n(导出成绩信息)&#34; --&gt; MessageSender
+        VideoStreamRecordController -- &#34;sendExportMsg\n(导出视频流记录)&#34; --&gt; MessageSender
+        AdmissionInformationService -- &#34;sendExportMsg\n(导出录取信息)&#34; --&gt; MessageSender
+        edit_exportStudentSituation -- &#34;sendExportStudentSituation\n(导出单节课考勤)&#34; --&gt; MessageSender
+        edit_exportAllStudentSituation -- &#34;sendExportStudentSituation\n(导出整门课考勤)&#34; --&gt; MessageSender
+    end
+
+    subgraph services [&#34;Services&#34;]
+        MessageSender --&gt; RabbitMQ[&#34;RabbitMQ\n消息队列&#34;]
+    end
+
+    RabbitMQ --&gt; BackgroundService[&#34;Background Service\n后台服务&#34;]
+
+    classDef default fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef controller fill:#ccf,stroke:#333,stroke-width:2px;
+    class controllers controller;
+    class services default;
+</code></pre><ol>
+<li>
+<p><strong>接收文件下载请求</strong></p>
+<p>当用户通过客户端（Web或桌面应用）发起文件下载请求时，请求首先被发送到服务器端的控制器（Controller）。以 <code>batchExportExamStudentsInfo</code> 方法为例，服务器端的 <code>PaymentInfoController</code> 接收到批量导出机考名单的请求。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@PostMapping</span>(<span style="color:#e6db74">&#34;/batch_export_exam_students&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> SaResult <span style="color:#a6e22e">batchExportExamStudentsInfo</span>(<span style="color:#a6e22e">@RequestBody</span> BatchSetTeachersInfoRO batchSetTeachersInfoRO) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ...</span>
+</span></span><span style="display:flex;"><span>    PageRO<span style="color:#f92672">&lt;</span>BatchSetTeachersInfoRO<span style="color:#f92672">&gt;</span> batchSetTeachersInfoROPageVO <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PageRO<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>                batchSetTeachersInfoROPageVO.<span style="color:#a6e22e">setEntity</span>(batchSetTeachersInfoRO);
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(roleList.<span style="color:#a6e22e">contains</span>(SECOND_COLLEGE_ADMIN.<span style="color:#a6e22e">getRoleName</span>())){
+</span></span><span style="display:flex;"><span>                    CollegeInformationPO userBelongCollege <span style="color:#f92672">=</span> scnuXueliTools.<span style="color:#a6e22e">getUserBelongCollege</span>();
+</span></span><span style="display:flex;"><span>                    batchSetTeachersInfoROPageVO.<span style="color:#a6e22e">getEntity</span>().<span style="color:#a6e22e">setCollege</span>(userBelongCollege.<span style="color:#a6e22e">getCollegeName</span>());
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">boolean</span> send <span style="color:#f92672">=</span> messageSender.<span style="color:#a6e22e">sendExportMsg</span>(batchSetTeachersInfoROPageVO, collegeAdminFilter, userId);
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> (send) {
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> SaResult.<span style="color:#a6e22e">ok</span>(<span style="color:#e6db74">&#34;导出学籍数据成功&#34;</span>);
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(roleList.<span style="color:#a6e22e">contains</span>(XUELIJIAOYUBU_ADMIN.<span style="color:#a6e22e">getRoleName</span>())){
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">boolean</span> send <span style="color:#f92672">=</span> messageSender.<span style="color:#a6e22e">sendExportMsg</span>(batchSetTeachersInfoROPageVO, managerFilter, userId);
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> (send) {
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> SaResult.<span style="color:#a6e22e">ok</span>(<span style="color:#e6db74">&#34;导出学籍数据成功&#34;</span>);
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>发送消息到消息队列</p>
+<p>紧接着，根据不同用户角色，构造一个 <code>PageRO&lt;BatchSetTeachersInfoRO&gt;</code> 对象，并调用 <code>messageSender</code> 的 <code>sendExportMsg</code> 方法，将下载任务发送到消息队列中。</p>
+<p>在此过程中，<code>sendExportMsg</code> 方法创建一个包含任务信息的JSON对象，并使用 <code>rabbitTemplate.convertAndSend</code> 方法将该消息发送到指定的RabbitMQ队列。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> send <span style="color:#f92672">=</span> messageSender.<span style="color:#a6e22e">sendExportMsg</span>(pageRO, filter, userId);
+</span></span></code></pre></div><p>sendExportMsg 封装了rabbitTemplate.convertAndSend方法，而rabbitTemplate.convertAndSend方法的参数是一个队列的名称，一个消息的实体类对象。而笔者在sendExportMsg方法中，就是把传入的<code>pageRO, filter, userId</code>属性做一个拼接成<code>convertAndSend</code>中传输的方法。</p>
+<p>方法签名如下：</p>
+<ul>
+<li><strong>参数列表</strong>:
+<ul>
+<li><code>PageRO&lt;?&gt; pageRO</code>: 这是一个泛型类对象，用于包装要导出的数据。<code>PageRO</code> 类似于一个分页响应对象，其中 <code>entity</code> 属性被用来存储具体的数据实体。</li>
+<li><code>AbstractFilter filter</code>: 这是一个过滤器的抽象类对象，实际上传入的是按照实际情况的实现的<code>Filter</code>。名为过滤器，实际上就是一个封装了特殊行为的类。传入的继承了<code>AbstractFilter</code>，内部实现了具体的函数方法。这部分也是一个策略模式的具体实现（多态），将会在后面专门开一篇文章来讲解这部分~</li>
+<li><code>String userId</code>: 用户的唯一标识，用于记录或验证是哪个用户发起的导出请求。</li>
+</ul>
+</li>
+<li><strong>返回值</strong>: 方法返回一个布尔值 <code>boolean</code>，表示消息是否成功发送到消息队列。</li>
+<li>这个方法 <code>sendExportMsg</code> 用于向消息队列发送导出任务的消息，具体用于后台的异步数据处理。以下是该方法的详细介绍：</li>
+</ul>
+</li>
+</ol>
+<p>​</p>
+<p>方法逻辑描述</p>
+<ol>
+<li>
+<p><strong>JSON对象创建</strong>: 首先创建一个 <code>JSONObject</code>，用来封装要发送的消息内容。</p>
+<ul>
+<li><code>&quot;type&quot;</code>: 存储 <code>pageRO</code> 中实体的类名称，用于消息接收端识别处理的数据类型。</li>
+<li><code>&quot;data&quot;</code>: 将 <code>pageRO</code> 对象转换成JSON字符串，这样消息接收者可以反序列化回原始对象进行处理。</li>
+<li><code>&quot;filter&quot;</code>: 将过滤器对象转换成JSON字符串，允许消息接收端应用相同的数据筛选逻辑。</li>
+<li><code>&quot;dataType&quot;</code>: 标记消息的类型，此处为“普通消息”，可能用于区分不同优先级或类型的消息处理。</li>
+<li><code>&quot;userId&quot;</code>: 传递发起请求的用户ID，可能用于权限验证或跟踪用户行为。</li>
+</ul>
+</li>
+<li>
+<p><strong>消息发送</strong>: 使用 <code>rabbitTemplate.convertAndSend</code> 方法将消息发送到指定的队列 (<code>queue4</code>)。这是通过 RabbitMQ 实现的，<code>rabbitTemplate</code> 是 Spring AMQP 的核心类之一，用于消息的发送和接收。</p>
+</li>
+<li>
+<p><strong>日志记录</strong>:</p>
+<ul>
+<li>成功发送消息后，记录一条成功日志。</li>
+<li>如果发送过程中遇到 <code>AmqpException</code>（AMQP协议异常），则记录错误日志并返回 <code>false</code>，表示消息发送失败。</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * 往消息队列中发送导出消息 后台异步处理导出任务
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @param pageRO
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @param filter
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @param userId
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @return
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">sendExportMsg</span>(PageRO<span style="color:#f92672">&lt;?&gt;</span> pageRO, AbstractFilter filter, String userId){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 创建一个包含数据和类型信息的JSON对象</span>
+</span></span><span style="display:flex;"><span>            JSONObject message <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JSONObject();
+</span></span><span style="display:flex;"><span>            message.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;type&#34;</span>, pageRO.<span style="color:#a6e22e">getEntity</span>().<span style="color:#a6e22e">getClass</span>().<span style="color:#a6e22e">getName</span>());
+</span></span><span style="display:flex;"><span>            message.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;data&#34;</span>, JSON.<span style="color:#a6e22e">toJSONString</span>(pageRO));
+</span></span><span style="display:flex;"><span>            message.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;filter&#34;</span>, JSON.<span style="color:#a6e22e">toJSONString</span>(filter));
+</span></span><span style="display:flex;"><span>            message.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;dataType&#34;</span>, <span style="color:#e6db74">&#34;普通消息&#34;</span>);
+</span></span><span style="display:flex;"><span>            message.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;userId&#34;</span>, userId);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">rabbitTemplate</span>.<span style="color:#a6e22e">convertAndSend</span>(queue4, message.<span style="color:#a6e22e">toJSONString</span>());
+</span></span><span style="display:flex;"><span>            log.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;成功发送导出文件处理消息 &#34;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (AmqpException e) {
+</span></span><span style="display:flex;"><span>            log.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;发送导出文件处理消息失败: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>发送成功后，服务器立即向客户端返回一个操作成功的响应。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (send) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> SaResult.<span style="color:#a6e22e">ok</span>(<span style="color:#e6db74">&#34;导出考试名单信息成功&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>至此，消息发送结束。</p>
+<h4 id="32-消息消费">3.2 消息消费</h4>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TB
+    A[(&#34;MessageReceiver Class: 监听消息队列&#34;)] --&gt;|收到消息| B[processExportData]
+    B --&gt; C{解析消息类型}
+    C --&gt;|类型: BatchSetTeachersInfoRO| D[ManagerFilter.exportExamStudentsInfo]
+    C --&gt;|其他类型| E[其他业务逻辑]
+    D --&gt; F[数据库查询]
+    F --&gt; G[构建Excel文件]
+    G --&gt;|使用EasyExcel库| H[Excel文件生成]
+    H --&gt; I[上传文件至Minio服务]
+    I --&gt; J{文件上传成功?}
+    J --&gt;|是| K[更新数据库: 用户下载消息]
+    K --&gt; L[发送确认消息至消息队列]
+    J --&gt;|否| M[发送错误处理消息至消息队列]
+
+    style A fill:#f9f,stroke:#333,stroke-width:4px
+    style B fill:#bbf,stroke:#f66,stroke-width:2px
+    style C fill:#ddf,stroke:#333,stroke-width:2px
+    style D fill:#ccf,stroke:#333,stroke-width:2px
+    style E fill:#ccf,stroke:#333,stroke-width:2px
+    style F fill:#ccf,stroke:#333,stroke-width:2px
+    style G fill:#ccf,stroke:#333,stroke-width:2px
+    style H fill:#ccf,stroke:#333,stroke-width:2px
+    style I fill:#ccf,stroke:#333,stroke-width:2px
+    style J fill:#ccf,stroke:#333,stroke-width:2px
+    style K fill:#ccf,stroke:#333,stroke-width:2px
+    style L fill:#ccf,stroke:#333,stroke-width:2px
+    style M fill:#ccf,stroke:#333,stroke-width:2px
+</code></pre><p>在这个后半部分的流程中，笔者关注的是如何在后端服务中处理通过消息队列接收到的导出任务。以下是结合代码描述的详细过程：</p>
+<h5 id="321-在messagereceiver类内">3.2.1 在MessageReceiver类内</h5>
+<ol>
+<li>
+<p><strong>监听和接收消息队列中的导出任务</strong>：</p>
+<p>后端服务使用 <code>@RabbitListener</code> 注解来监听消息队列。当 <code>sendExportMsg</code> 方法发送消息到队列时，相应的监听器会触发 <code>processExportData</code> 方法，开始处理导出任务。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@RabbitListener</span>(queuesToDeclare <span style="color:#f92672">=</span> { <span style="color:#a6e22e">@Queue</span>(<span style="color:#e6db74">&#34;${spring.rabbitmq.queue3}&#34;</span>), <span style="color:#a6e22e">@Queue</span>(<span style="color:#e6db74">&#34;${spring.rabbitmq.queue4}&#34;</span>) })
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RabbitHandler</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">processExportData</span>(String messageContent, Channel channel, Message msg) {
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">// ...</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p><strong>解析消息内容并执行业务逻辑</strong></p>
+<p>在 <code>processExportData</code> 方法中，接收到的消息内容被解析为JSON对象。根据 <code>type</code> 字段的值，方法确定如何处理消息。对于机考名单导出类型的消息，会调用 <code>exportExamStudentsInfo</code> 方法进行处理。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#e6db74">&#34;com.scnujxjy.backendpoint.model.ro.exam.BatchSetTeachersInfoRO&#34;</span>.<span style="color:#a6e22e">equals</span>(type)) {
+</span></span><span style="display:flex;"><span>               PageRO<span style="color:#f92672">&lt;</span>BatchSetTeachersInfoRO<span style="color:#f92672">&gt;</span> pageRO <span style="color:#f92672">=</span> JSON.<span style="color:#a6e22e">parseObject</span>(message.<span style="color:#a6e22e">getString</span>(<span style="color:#e6db74">&#34;data&#34;</span>),
+</span></span><span style="display:flex;"><span>                       <span style="color:#66d9ef">new</span> TypeReference<span style="color:#f92672">&lt;</span>PageRO<span style="color:#f92672">&lt;</span>BatchSetTeachersInfoRO<span style="color:#f92672">&gt;&gt;</span>() {
+</span></span><span style="display:flex;"><span>                       });
+</span></span><span style="display:flex;"><span>               String loginId <span style="color:#f92672">=</span> message.<span style="color:#a6e22e">getString</span>(<span style="color:#e6db74">&#34;userId&#34;</span>);
+</span></span><span style="display:flex;"><span>               String dataType <span style="color:#f92672">=</span> message.<span style="color:#a6e22e">getString</span>(<span style="color:#e6db74">&#34;dataType&#34;</span>);
+</span></span><span style="display:flex;"><span>               List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> roleList <span style="color:#f92672">=</span> StpUtil.<span style="color:#a6e22e">getRoleList</span>(loginId);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>               <span style="color:#75715e">// 生成下载消息</span>
+</span></span><span style="display:flex;"><span>               PlatformMessagePO platformMessagePO <span style="color:#f92672">=</span> scnuXueliTools.<span style="color:#a6e22e">generateMessage</span>(loginId);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">if</span> (roleList.<span style="color:#a6e22e">contains</span>(RoleEnum.<span style="color:#a6e22e">XUELIJIAOYUBU_ADMIN</span>.<span style="color:#a6e22e">getRoleName</span>())) {
+</span></span><span style="display:flex;"><span>                   <span style="color:#75715e">// 学历教育部管理员</span>
+</span></span><span style="display:flex;"><span>                   AbstractFilter managerFilter <span style="color:#f92672">=</span> JSON.<span style="color:#a6e22e">parseObject</span>(message.<span style="color:#a6e22e">getString</span>(<span style="color:#e6db74">&#34;filter&#34;</span>), <span style="color:#66d9ef">new</span> TypeReference<span style="color:#f92672">&lt;</span>ManagerFilter<span style="color:#f92672">&gt;</span>() {
+</span></span><span style="display:flex;"><span>                   });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                   log.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;接收到批量导出考试信息消息，开始准备数据 &#34;</span>);
+</span></span><span style="display:flex;"><span>                   <span style="color:#66d9ef">if</span>(dataType.<span style="color:#a6e22e">equals</span>(<span style="color:#e6db74">&#34;机考名单&#34;</span>)){
+</span></span><span style="display:flex;"><span>                       managerFilter.<span style="color:#a6e22e">exportExamStudentsInfo</span>(pageRO.<span style="color:#a6e22e">getEntity</span>(), loginId, platformMessagePO);
+</span></span><span style="display:flex;"><span>                   }<span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>                       managerFilter.<span style="color:#a6e22e">exportExamTeachersInfo</span>(pageRO.<span style="color:#a6e22e">getEntity</span>(), loginId, platformMessagePO);
+</span></span><span style="display:flex;"><span>                   }
+</span></span></code></pre></div></li>
+</ol>
+<p>接下来，我们以传入的<code>message</code>对应的<code>type == com.scnujxjy.backendpoint.model.ro.exam.BatchSetTeachersInfoRO</code>为例子，分析一下是怎么使用<code> *managerFilter*.exportExamStudentsInfo(*pageRO*.getEntity(), *loginId*, *platformMessagePO*);</code> 去批量导出（下载）文件的。</p>
+<h5 id="322-在managerfilter类内">3.2.2 在managerFilter类内</h5>
+<ol>
+<li><strong>数据库查询获取导出数据</strong>：</li>
+</ol>
+<p>​	根据接收到的消息内容，例如 <code>BatchSetTeachersInfoRO</code>，进行数据库查询。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> <span style="color:#75715e">// 使用Mapper获取数据库中的考试名单数据</span>
+</span></span><span style="display:flex;"><span> List<span style="color:#f92672">&lt;</span>CourseExamInfoPO<span style="color:#f92672">&gt;</span> courseExamInfoPOS <span style="color:#f92672">=</span> courseExamInfoMapper1.<span style="color:#a6e22e">batchSelectData</span>(entity);
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">// 处理数据，构造ExamStudentsInfoVO列表</span>
+</span></span></code></pre></div><ol start="4">
+<li>
+<p><strong>Excel文件流的构建</strong></p>
+<p>使用从 Minio 获取的模板文件流，<code>exportExamStudentsInfo</code> 方法接下来创建一个 <code>ExcelWriter</code> 对象，并利用 EasyExcel 库将数据库查询到的数据填充到 Excel 模板中。这个过程创建了一个在内存中的 Excel 文件流（<code>ByteArrayOutputStream</code>）。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">erDiagram
+    global_config {
+        bigint id PK &#34;auto_increment&#34;
+        varchar(255) config_key &#34;UNIQUE&#34;
+        varchar(255) config_value
+        varchar(255) description
+        timestamp updated_at &#34;default CURRENT_TIMESTAMP&#34;
+    }
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>ExcelWriter excelWriter <span style="color:#f92672">=</span> EasyExcel.<span style="color:#a6e22e">write</span>(outputStream, ExamStudentsInfoVO.<span style="color:#a6e22e">class</span>)                                   .<span style="color:#a6e22e">withTemplate</span>(fileInputStreamFromMinio)
+</span></span><span style="display:flex;"><span>                                   .<span style="color:#a6e22e">build</span>();
+</span></span></code></pre></div></li>
+<li>
+<p>使用EasyExcel库生成Excel文件：</p>
+<p>利用EasyExcel和模板文件流，将查询到的数据填充进Excel模板中，并生成Excel文件。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> ExcelWriter excelWriter <span style="color:#f92672">=</span> EasyExcel.<span style="color:#a6e22e">write</span>(outputStream, ExamStudentsInfoVO.<span style="color:#a6e22e">class</span>)
+</span></span><span style="display:flex;"><span>                                     .<span style="color:#a6e22e">withTemplate</span>(fileInputStreamFromMinio)
+</span></span><span style="display:flex;"><span>                                     .<span style="color:#a6e22e">build</span>();
+</span></span><span style="display:flex;"><span> FillConfig fillConfig <span style="color:#f92672">=</span> FillConfig.<span style="color:#a6e22e">builder</span>().<span style="color:#a6e22e">forceNewRow</span>(Boolean.<span style="color:#a6e22e">TRUE</span>).<span style="color:#a6e22e">build</span>();
+</span></span><span style="display:flex;"><span> excelWriter.<span style="color:#a6e22e">fill</span>(examStudentsInfoVOS, fillConfig, EasyExcel.<span style="color:#a6e22e">writerSheet</span>().<span style="color:#a6e22e">build</span>());
+</span></span><span style="display:flex;"><span> excelWriter.<span style="color:#a6e22e">finish</span>();
+</span></span></code></pre></div></li>
+<li>
+<p><strong>上传Excel文件到Minio服务</strong>：</p>
+<p>生成的Excel文件作为字节流上传到Minio服务，并记录上传文件的大小。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> ByteArrayInputStream inputStream <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ByteArrayInputStream(outputStream.<span style="color:#a6e22e">toByteArray</span>());
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">boolean</span> b <span style="color:#f92672">=</span> minioService1.<span style="color:#a6e22e">uploadStreamToMinio</span>(inputStream, fileName, bucketName);
+</span></span></code></pre></div></li>
+<li>
+<p><strong>数据库记录用户下载消息</strong>：</p>
+<p>如果文件成功上传到Minio，更新数据库中的用户下载消息记录，提供文件的下载链接。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (b) {
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">// 插入或更新数据库中的下载消息记录</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p><strong>确认或取消文件操作</strong></p>
+<p>一旦文件上传成功，相应的用户下载消息会被插入或更新到数据库中，确保前端能够检索到文件的下载链接。</p>
+<p>如果文件成功上传到Minio，则通过消息通道确认消息处理成功；如果在处理过程中出现异常，则拒绝消息，可以选择是否重新入队。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (b) {
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">// 成功操作</span>
+</span></span><span style="display:flex;"><span>   channel.<span style="color:#a6e22e">basicAck</span>(msg.<span style="color:#a6e22e">getMessageProperties</span>().<span style="color:#a6e22e">getDeliveryTag</span>(), <span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">// 异常操作</span>
+</span></span><span style="display:flex;"><span>   channel.<span style="color:#a6e22e">basicNack</span>(msg.<span style="color:#a6e22e">getMessageProperties</span>().<span style="color:#a6e22e">getDeliveryTag</span>(), <span style="color:#66d9ef">false</span>, <span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ol>
+<p>在整个过程中，从接收消息开始，到从Minio获取模板，再到填充数据、生成文件、上传到Minio，并最终处理确认消息，整个数据导出任务是在后台服务中异步执行的。这个异步处理机制允许前端立即响应用户的请求，而无需等待文件的实际生成，从而显著提高了用户体验。同时，后端服务通过RabbitMQ实现了任务的异步处理，提高了系统的可扩展性和稳定性。</p>
+<h3 id="4-文件存储和管理">4. 文件存储和管理</h3>
+<h4 id="41-如何在数据库中存储minio的相对地址">4.1 如何在数据库中存储Minio的相对地址</h4>
+<p>为了在数据库中存储文件的相对地址，笔者可以使用一个实体类 <code>GlobalConfigPO</code>，该类映射到数据库中的一个表，可以用来存储各种配置信息，包括文件在Minio中的存储路径。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Data</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@TableName</span>(<span style="color:#e6db74">&#34;global_config&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GlobalConfigPO</span> <span style="color:#66d9ef">implements</span> Serializable {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@TableId</span>(value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;id&#34;</span>, type <span style="color:#f92672">=</span> IdType.<span style="color:#a6e22e">AUTO</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Long id;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String configKey;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String configValue; <span style="color:#75715e">// 存储Minio文件路径</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String description;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Date updatedAt;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>当需要存储一个文件路径时，可以这样做：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>GlobalConfigPO config <span style="color:#f92672">=</span> GlobalConfigPO.<span style="color:#a6e22e">builder</span>()
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">configKey</span>(<span style="color:#e6db74">&#34;file_path&#34;</span>)
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">configValue</span>(<span style="color:#e6db74">&#34;minio/bucket/path/to/file&#34;</span>)
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">description</span>(<span style="color:#e6db74">&#34;Minio中文件的存储路径&#34;</span>)
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">build</span>();
+</span></span><span style="display:flex;"><span>globalConfigMapper.<span style="color:#a6e22e">insert</span>(config);
+</span></span></code></pre></div><p>这样，文件的路径就被存储在数据库中，方便进行管理和检索。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesimagesimage-20240428103839204.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesimagesimage-20240428103839204.png, https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesimagesimage-20240428103839204.png 1.5x, https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesimagesimage-20240428103839204.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesimagesimage-20240428103839204.png"
+        title="image-20240428103839204" /></p>
+<h4 id="42-文件命名设计-枚举类设计">4.2 文件命名设计-枚举类设计</h4>
+<p><strong>文件命名</strong>的设计至关重要。为了对需要下载或上传的文件进行命名，笔者采用了一种结合了硬编码和动态拼接的模式。在硬编码部分，笔者利用枚举来管理Minio的桶名和子目录，这样可以确保文件存储在正确的位置。而在动态部分，笔者通常包含时间戳和用户信息，以确保每个文件名的唯一性。这种方法既保证了文件名的逻辑性和可管理性，又确保了文件名的唯一性，从而提高了系统的可靠性和效率。</p>
+<p>为了应对多种Minio的变量名存储，笔者设计了一个枚举类。<code>MinioBucketEnum</code> 枚举类扮演了一个关键角色。它为Minio存储的不同数据类型定义了统一的桶名和子目录，这种设计有助于组织和标准化文件存储结构，同时也简化了文件管理。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Getter</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">enum</span> MinioBucketEnum {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 定义不同类型的数据存储桶和子目录</span>
+</span></span><span style="display:flex;"><span>    DATA_DOWNLOAD_STUDENT_STATUS(<span style="color:#e6db74">&#34;dataexport&#34;</span>, <span style="color:#e6db74">&#34;学籍数据&#34;</span>),
+</span></span><span style="display:flex;"><span>    DATA_DOWNLOAD_SCORE_INFORMATION(<span style="color:#e6db74">&#34;dataexport&#34;</span>, <span style="color:#e6db74">&#34;成绩数据&#34;</span>),
+</span></span><span style="display:flex;"><span>    DATA_DOWNLOAD_STUDENT_FEES(<span style="color:#e6db74">&#34;dataexport&#34;</span>, <span style="color:#e6db74">&#34;缴费数据&#34;</span>),
+</span></span><span style="display:flex;"><span>    DATA_DOWNLOAD_SYSTEM(<span style="color:#e6db74">&#34;dataexport&#34;</span>, <span style="color:#e6db74">&#34;系统反馈数据&#34;</span>),
+</span></span><span style="display:flex;"><span>    DATA_DOWNLOAD_EXAM_THEACHER(<span style="color:#e6db74">&#34;dataexport&#34;</span>, <span style="color:#e6db74">&#34;考试教师信息导出&#34;</span>),
+</span></span><span style="display:flex;"><span>    DATA_DOWNLOAD_EXAM_STUDENT(<span style="color:#e6db74">&#34;dataexport&#34;</span>, <span style="color:#e6db74">&#34;考试考生信息导出&#34;</span>),
+</span></span><span style="display:flex;"><span>    DATA_DOWNLOAD_ADMISSION_STUDENT(<span style="color:#e6db74">&#34;dataexport&#34;</span>, <span style="color:#e6db74">&#34;新生录取信息导出&#34;</span>),
+</span></span><span style="display:flex;"><span>    DATA_DOWNLOAD_CLASS_INFORMATIONS(<span style="color:#e6db74">&#34;dataexport&#34;</span>, <span style="color:#e6db74">&#34;班级数据&#34;</span>),
+</span></span><span style="display:flex;"><span>    ANNOUNCEMENT_BUCKET(<span style="color:#e6db74">&#34;dataexport&#34;</span>, <span style="color:#e6db74">&#34;公告附件数据&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String bucketName;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String subDirectory;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    MinioBucketEnum(String bucketName, String subDirectory) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">bucketName</span> <span style="color:#f92672">=</span> bucketName;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">subDirectory</span> <span style="color:#f92672">=</span> subDirectory;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>通过枚举类定义的**==桶名和子目录==**，所有文件存储操作都遵循统一的路径标准。这不仅减少了路径硬编码的需要，也使得文件的组织和访问更加系统化和一致。</p>
+<h4 id="43-从数据库获取实体类构建excel文件上传">4.3 从数据库获取实体类，构建Excel文件上传</h4>
+<p>文件上传到Minio的过程涉及几个关键步骤：</p>
+<ol>
+<li><strong>数据写入</strong>:
+<ul>
+<li>使用 <code>ByteArrayOutputStream</code> 收集需要上传的数据。这一步涉及将数据内容写入到内存中的一个字节流中。</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>ByteArrayOutputStream outputStream <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ByteArrayOutputStream();
+</span></span></code></pre></div><ol start="2">
+<li><strong>文件大小获取</strong>:
+<ul>
+<li>在数据完全写入流后，可以获取到数据的大小。</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> fileSize <span style="color:#f92672">=</span> outputStream.<span style="color:#a6e22e">size</span>();
+</span></span></code></pre></div><ol start="3">
+<li><strong>文件命名</strong>:
+<ul>
+<li>文件名的生成是根据当前的日期和时间来构建的，确保每个文件名的唯一性，同时附加用户信息，从而在多用户环境中避免命名冲突。</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Date generateData <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date();
+</span></span><span style="display:flex;"><span>SimpleDateFormat sdf <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SimpleDateFormat(<span style="color:#e6db74">&#34;yyyyMMdd_HHmmss_SSS&#34;</span>);
+</span></span><span style="display:flex;"><span>String currentDateTime <span style="color:#f92672">=</span> sdf.<span style="color:#a6e22e">format</span>(generateData);
+</span></span><span style="display:flex;"><span>String fileName <span style="color:#f92672">=</span> subDirectory <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#f92672">+</span> username <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;_&#34;</span> <span style="color:#f92672">+</span> currentDateTime <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;_examTeachersData.xlsx&#34;</span>;
+</span></span></code></pre></div><ol start="4">
+<li><strong>文件上传</strong>:
+<ul>
+<li>将 <code>ByteArrayOutputStream</code> 转换为 <code>ByteArrayInputStream</code>，以便上传数据到Minio。这一步骤是通过调用封装了Minio的API的<code>uploadStreamToMinio(inputStream, fileName, bucketName);</code>完成的，需要指定桶名和文件名。</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>ByteArrayInputStream inputStream <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ByteArrayInputStream(outputStream.<span style="color:#a6e22e">toByteArray</span>());
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> success <span style="color:#f92672">=</span> minioService.<span style="color:#a6e22e">uploadStreamToMinio</span>(inputStream, fileName, bucketName);
+</span></span></code></pre></div><p>简单介绍一下本处的<code>uploadStreamToMinio(inputStream, fileName, bucketName)</code>方法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * 把文件流直接写入到 Minio 作为一个文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @param inputStream
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @param fileName
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">uploadStreamToMinio</span>(InputStream inputStream, String fileName, String diyBucketName) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        Map<span style="color:#f92672">&lt;</span>String, String<span style="color:#f92672">&gt;</span> headers <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>        headers.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;Content-Disposition&#34;</span>, <span style="color:#e6db74">&#34;attachment; filename*=UTF-8&#39;&#39;&#34;</span> <span style="color:#f92672">+</span> URLEncoder.<span style="color:#a6e22e">encode</span>(fileName, <span style="color:#e6db74">&#34;UTF-8&#34;</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        minioClient.<span style="color:#a6e22e">putObject</span>(
+</span></span><span style="display:flex;"><span>                PutObjectArgs.<span style="color:#a6e22e">builder</span>()
+</span></span><span style="display:flex;"><span>                        .<span style="color:#a6e22e">bucket</span>(diyBucketName)
+</span></span><span style="display:flex;"><span>                        .<span style="color:#a6e22e">object</span>(fileName)
+</span></span><span style="display:flex;"><span>                        .<span style="color:#a6e22e">stream</span>(inputStream, <span style="color:#f92672">-</span>1, 10485760)  <span style="color:#75715e">// 10485760 是 10MiB</span>
+</span></span><span style="display:flex;"><span>                        .<span style="color:#a6e22e">headers</span>(headers)
+</span></span><span style="display:flex;"><span>                        .<span style="color:#a6e22e">build</span>());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (Exception e) {
+</span></span><span style="display:flex;"><span>        log.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;上传文件到 Minio 失败: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//            throw new RuntimeException(&#34;上传文件到 Minio 失败: &#34; + e.getMessage());</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li><strong>InputStream inputStream</strong>: 这是要上传的文件的数据流。在实际应用中，这可以是从一个==文件、数据库或任何其他数据源==获取的数据流。</li>
+<li><strong>String fileName</strong>: 上传到Minio后文件的名称，这也会成为对象存储中的对象键。</li>
+<li><strong>String diyBucketName</strong>: 指定要上传文件的Minio存储桶名称。</li>
+</ul>
+<p>相信各位读者在阅读的时候，也能很清楚地发现这方法就是一个动态拼装，通过传递的数据流、文件名和桶名作为参数传入构造方法中，然后利用Springboot提供的<code>minioClient</code>来自动构造。但是读者可能会疑惑，本处在<code> minioClient.putObject</code>传入的Map参数是什么？</p>
+<p><strong>这个<code>Map</code>参数实际上是用来存放HTTP头部信息，其中最关键的一个是<code>Content-Disposition</code>。</strong><code>Content-Disposition</code>头部在HTTP协议中用来指定客户端接收到的内容该如何处理。</p>
+<p>它支持以下两种基本的呈现形式：</p>
+<ol>
+<li><strong>inline</strong>：
+<ul>
+<li><code>inline</code> 默认值，意味着内容应当直接在浏览器中显示，例如图片或PDF文档，如果内容类型被浏览器支持的话。</li>
+<li>例：<code>Content-Disposition: inline</code></li>
+</ul>
+</li>
+<li><strong>attachment</strong>：
+<ul>
+<li><code>attachment</code> 指示浏览器将响应视为一个文件，提示用户下载或询问存储位置。这是控制文件作为下载项提供给用户的标准方法。</li>
+<li>例：<code>Content-Disposition: attachment; filename=&quot;filename.jpg&quot;</code></li>
+</ul>
+</li>
+</ol>
+<p>本处在我们的上下文中，当文件通过Minio服务上传后，这个头部将决定文件在被下载时的表现形式，比如文件是否应当直接在浏览器中显示（<code>inline</code>），还是作为一个附件提供给用户下载（<code>attachment</code>）。</p>
+<p><strong>特别地，这里我们设置了<code>Content-Disposition</code>为“attachment”</strong>，这意味着文件将被作为附件处理。这是非常适合下载操作的设置，因为它会提示用户保存文件，而不是直接在浏览器中打开。此外，该头部还支持一个非常有用的参数<code>filename</code>，这允许我们指定一个默认的文件名，当用户保存文件时，这个名字将会被浏览器自动使用。</p>
+<p>为了解决可能的文件名编码问题（特别是包含非ASCII字符的文件名），我们还使用了<code>filename*</code>参数，该参数允许文件名包含特殊字符，通过URL编码的方式进行传递。这种方式确保了无论用户的操作系统是什么，文件名都能正确显示，避免了因字符编码问题导致的文件名错误或损坏：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>headers.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;Content-Disposition&#34;</span>, <span style="color:#e6db74">&#34;attachment; filename*=UTF-8&#39;&#39;&#34;</span> <span style="color:#f92672">+</span> URLEncoder.<span style="color:#a6e22e">encode</span>(fileName, <span style="color:#e6db74">&#34;UTF-8&#34;</span>));
+</span></span></code></pre></div><p>这段代码通过URL编码<code>fileName</code>并将其设置到<code>Content-Disposition</code>中，确保了文件名在HTTP头部中的正确传递和解析。通过这种方法，无论文件名中包含何种字符，都能被正确处理，从而在用户下载文件时提供无缝和准确的用户体验。</p>
+<h3 id="5文件数据变更记录">5.文件数据变更记录</h3>
+<p>在开发过程中，处理文件上传并确保跟踪数据正确无误是一个核心任务。我们不仅要确保文件被安全上传到Minio，还要更新数据库以记录这一事件，以便进行进一步的操作或审计。</p>
+<p>当应用成功将文件上传到Minio后，下一步是记录这一事件。这不仅有助于追踪文件的状态，也是确保用户和系统能够访问到最新数据的关键步骤。</p>
+<h4 id="51-创建和插入下载消息记录">5.1 创建和插入下载消息记录</h4>
+<p>首先，假设上传操作成功（即<code>if (b)</code>返回<code>true</code>），我们需要创建一个记录实体，这里使用的是<code>DownloadMessagePO</code>。这个实体将保存关键信息，如文件的创建时间、文件名、文件在Minio中的URL和文件大小。这样的记录对于后续的用户下载请求非常重要，因为它们提供了文件的具体存储位置和其他元数据。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>DownloadMessagePO downloadMessagePO <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DownloadMessagePO();
+</span></span><span style="display:flex;"><span>downloadMessagePO.<span style="color:#a6e22e">setCreatedAt</span>(generateData);
+</span></span><span style="display:flex;"><span>downloadMessagePO.<span style="color:#a6e22e">setFileName</span>(DownloadFileNameEnum.<span style="color:#a6e22e">EXAM_TEACHERS_EXPORT_FILE</span>.<span style="color:#a6e22e">getFilename</span>());
+</span></span><span style="display:flex;"><span>downloadMessagePO.<span style="color:#a6e22e">setFileMinioUrl</span>(bucketName <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#f92672">+</span> fileName);
+</span></span><span style="display:flex;"><span>downloadMessagePO.<span style="color:#a6e22e">setFileSize</span>((<span style="color:#66d9ef">long</span>) fileSize);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> insert <span style="color:#f92672">=</span> downloadMessageMapper.<span style="color:#a6e22e">insert</span>(downloadMessagePO);
+</span></span><span style="display:flex;"><span>log.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;下载考试信息数据、下载文件消息插入 &#34;</span> <span style="color:#f92672">+</span> insert);
+</span></span></code></pre></div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesimagesimage-20240428121420521.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesimagesimage-20240428121420521.png, https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesimagesimage-20240428121420521.png 1.5x, https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesimagesimage-20240428121420521.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesimagesimage-20240428121420521.png"
+        title="image-20240428121420521" /></p>
+<p>在这段代码中，每一个属性的设置都承担着特定的数据追踪功能，确保所有相关信息都被系统记录并可查询。例如，<code>setFileMinioUrl</code>存储了文件在Minio中的具体位置，这对于后续的访问尤为重要。</p>
+<h4 id="52-更新关联消息记录">5.2 更新关联消息记录</h4>
+<p>接下来，如果涉及到系统中其他相关的操作或消息（这里假设是关于平台信息的更新），我们需要利用已创建的下载消息记录的ID来更新其他记录。这是数据一致性和完整性的关键步骤，确保所有相关的系统部分都引用到正确的数据。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Long generatedId <span style="color:#f92672">=</span> downloadMessagePO.<span style="color:#a6e22e">getId</span>();
+</span></span><span style="display:flex;"><span>platformMessagePO.<span style="color:#a6e22e">setRelatedMessageId</span>(generatedId);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> update <span style="color:#f92672">=</span> platformMessageMapper.<span style="color:#a6e22e">updateById</span>(platformMessagePO);
+</span></span><span style="display:flex;"><span>log.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;机考信息附件1下载消息所需附件生成完毕 更新结果 &#34;</span> <span style="color:#f92672">+</span> update);
+</span></span></code></pre></div><p>这里，<code>generatedId</code>是新插入的下载消息记录的自动生成ID，它被用来更新平台消息记录，指明这两条记录之间的关联。</p>
+<h2 id="下集处理excel文件的上传">下集：处理Excel文件的上传</h2>
+<h4 id="1-引言-1">1. 引言</h4>
+<ul>
+<li>简介：概述文章的目的和上集内容的承接。</li>
+<li>目标：讨论使用消息队列处理大量Excel文件上传的好处。</li>
+</ul>
+<h4 id="2-上传架构和设计">2. 上传架构和设计</h4>
+<ul>
+<li>描述处理文件上传的系统架构。</li>
+<li>介绍组件间如何交互，特别是消息队列的作用。</li>
+</ul>
+<h4 id="3-文件上传流程">3. 文件上传流程</h4>
+<ul>
+<li>详细说明文件上传到服务器的步骤。</li>
+<li>描述如何将上传任务分发到消息队列。</li>
+</ul>
+<h4 id="4-消息队列处理机制">4. 消息队列处理机制</h4>
+<ul>
+<li>详述从消息队列中读取和处理上传任务的流程。</li>
+<li>展示如何实现流量削峰和提升系统响应能力。</li>
+</ul>
+<h4 id="5-数据处理和安全">5. 数据处理和安全</h4>
+<ul>
+<li>讨论在文件上传过程中的数据处理，如数据解析和校验。</li>
+<li>探讨确保上传数据安全性的策略，包括访问控制和数据加密。</li>
+</ul>
+<h4 id="6-性能和可扩展性">6. 性能和可扩展性</h4>
+<ul>
+<li>分析影响上传性能的因素。</li>
+<li>提供扩展系统能力的方法和建议。</li>
+</ul>
+<h4 id="7-异常管理和恢复策略">7. 异常管理和恢复策略</h4>
+<ul>
+<li>介绍如何处理上传过程中的异常情况。</li>
+<li>讨论系统的恢复机制和备份策略。</li>
+</ul>
+<h4 id="8-结论-1">8. 结论</h4>
+<ul>
+<li>总结使用消息队列处理文件上传的优势。</li>
+<li>预测未来的发展趋势和可能的技术革新。</li>
+</ul>
+</div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">HangerLin 林廷翰</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
