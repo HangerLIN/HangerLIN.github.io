@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Online-Issues on 欢迎来到 Hanger 的技术博客</title>
-    <link>https://example.org/online-issues/</link>
+    <link>https://hangerlin.github.io/online-issues/</link>
     <description>Recent content in Online-Issues on 欢迎来到 Hanger 的技术博客</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <managingEditor>hangerlin@163.com (HangerLin 林廷翰)</managingEditor>
     <webMaster>hangerlin@163.com (HangerLin 林廷翰)</webMaster>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://example.org/online-issues/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hangerlin.github.io/online-issues/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
