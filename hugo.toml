@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://hangerlin.github.io/'
 languageCode = 'zh-CN'
 title = '欢迎来到 Hanger 的技术博客'
 # 语言名称 ["English", "简体中文", "Français", "Polski", ...]

@@ -2,20 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Juc-Explorations on 欢迎来到 Hanger 的技术博客</title>
-    <link>http://localhost:1313/juc-exploration/</link>
+    <link>https://example.org/juc-exploration/</link>
     <description>Recent content in Juc-Explorations on 欢迎来到 Hanger 的技术博客</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <managingEditor>hangerlin@163.com (HangerLin 林廷翰)</managingEditor>
     <webMaster>hangerlin@163.com (HangerLin 林廷翰)</webMaster>
-    <lastBuildDate>Sun, 28 Apr 2024 17:43:19 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/juc-exploration/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My First Article</title>
-      <link>http://localhost:1313/juc-exploration/my-first-article/</link>
-      <pubDate>Sun, 28 Apr 2024 17:43:19 +0800</pubDate><author>hangerlin@163.com (HangerLin 林廷翰)</author>
-      <guid>http://localhost:1313/juc-exploration/my-first-article/</guid>
-      <description></description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://example.org/juc-exploration/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
