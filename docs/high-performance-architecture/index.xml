@@ -1,49 +1,352 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>High-Performance-Architectures on 欢迎来到 Hanger 的技术博客</title>
-    <link>https://hangerlin.github.io/high-performance-architecture/</link>
-    <description>Recent content in High-Performance-Architectures on 欢迎来到 Hanger 的技术博客</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <managingEditor>hangerlin@163.com (HangerLin 林廷翰)</managingEditor>
-    <webMaster>hangerlin@163.com (HangerLin 林廷翰)</webMaster>
-    <lastBuildDate>Mon, 29 Apr 2024 14:00:32 +0800</lastBuildDate>
-    <atom:link href="https://hangerlin.github.io/high-performance-architecture/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>（一）高效异步：利用消息队列优化大规模Excel文件下载</title>
-      <link>https://hangerlin.github.io/high-performance-architecture/%E6%9C%AA%E5%91%BD%E5%90%8D/</link>
-      <pubDate>Mon, 29 Apr 2024 14:00:32 +0800</pubDate><author>hangerlin@163.com (HangerLin 林廷翰)</author>
-      <guid>https://hangerlin.github.io/high-performance-architecture/%E6%9C%AA%E5%91%BD%E5%90%8D/</guid>
-      <description>1. 前言 2. 系统架构概览 本节将概述本系统的主要组成部分，包括客户端、服务器、消息队列（RabbitMQ）和文件存储系统（Minio），并深入探讨</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://hangerlin.github.io/high-performance-architecture/excel%E4%B8%8A%E4%BC%A0/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hangerlin@163.com (HangerLin 林廷翰)</author>
-      <guid>https://hangerlin.github.io/high-performance-architecture/excel%E4%B8%8A%E4%BC%A0/</guid>
-      <description>高性能架构之道：实战高性能在线教育平台设计 +++ title = &amp;ldquo;高性能架构之道：实战高性能在线教育平台设计&amp;rdquo; date = &amp;ldquo;2024-04-29T14:00:32+08:00&amp;rdquo; draft = true +++ （一）高</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://hangerlin.github.io/high-performance-architecture/mermaid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hangerlin@163.com (HangerLin 林廷翰)</author>
-      <guid>https://hangerlin.github.io/high-performance-architecture/mermaid/</guid>
-      <description>title = &amp;ldquo;mermaid使用&amp;rdquo; draft = true :trophy: Mermaid 被提名并获得了 JS Open Source Awards (2019) 的 &amp;ldquo;The most exciting use of technology&amp;rdquo; 奖项!!! 感谢所有参与进来提交 PR，解答疑</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://hangerlin.github.io/high-performance-architecture/%E4%B8%8A%E9%9B%86%E7%B3%BB%E7%BB%9F%E5%90%8C%E6%AD%A5%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hangerlin@163.com (HangerLin 林廷翰)</author>
-      <guid>https://hangerlin.github.io/high-performance-architecture/%E4%B8%8A%E9%9B%86%E7%B3%BB%E7%BB%9F%E5%90%8C%E6%AD%A5%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96/</guid>
-      <description>title = &amp;ldquo;（一）高效异步：利用消息队列优化大规模Excel文件下载&amp;rdquo; date = 2024-04-28T17:43:19+08:00 draft = true 上集：系统同步设计与初始化 1. 引言 介绍新旧</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://hangerlin.github.io/high-performance-architecture/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F-%E4%B8%8D%E5%90%8Cfilter%E7%9A%84%E8%AE%BE%E8%AE%A1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>hangerlin@163.com (HangerLin 林廷翰)</author>
-      <guid>https://hangerlin.github.io/high-performance-architecture/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F-%E4%B8%8D%E5%90%8Cfilter%E7%9A%84%E8%AE%BE%E8%AE%A1/</guid>
-      <description>策略模式-不同filter的设计 +++ title = &amp;ldquo;策略模式-不同filter的设计&amp;rdquo; date = 2024-04-28T17:43:19+08:00 draft = true +++ /** * 批量导出新生录取数据 * @param</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>High-Performance-Architectures on 欢迎来到 Hanger 的技术博客</title><link>https://hangerlin.github.io/high-performance-architecture/</link><description>Recent content in High-Performance-Architectures on 欢迎来到 Hanger 的技术博客</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Mon, 29 Apr 2024 14:00:32 +0800</lastBuildDate><atom:link href="https://hangerlin.github.io/high-performance-architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>（一）高效异步：利用消息队列优化大规模Excel文件下载</title><link>https://hangerlin.github.io/high-performance-architecture/%E4%B8%80%E9%AB%98%E6%95%88%E5%BC%82%E6%AD%A5%E5%88%A9%E7%94%A8%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%BC%98%E5%8C%96%E5%A4%A7%E8%A7%84%E6%A8%A1excel%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</link><pubDate>Mon, 29 Apr 2024 14:00:32 +0800</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/%E4%B8%80%E9%AB%98%E6%95%88%E5%BC%82%E6%AD%A5%E5%88%A9%E7%94%A8%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%BC%98%E5%8C%96%E5%A4%A7%E8%A7%84%E6%A8%A1excel%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</guid><description>&lt;p>这是如何构建“实战企业级高性能在线教育平台设计”系列文章的第一章。&lt;/p>
+&lt;p>在这一系列的开篇，笔者将深入探讨在线教育平台背后的技术架构和设计思想，以及如何通过高效的系统设计来满足日益增长的教育需求和提升用户体验。&lt;/p>
+&lt;p>接下来的章节中，笔者将详细介绍具体的实现技术、性能优化策略以及如何处理大规模用户并发的挑战。目标是为读者提供一套完整的解决方案，帮助你构建一个既稳定又高效的在线教育平台。&lt;/p></description></item><item><title/><link>https://hangerlin.github.io/high-performance-architecture/mermaid/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/mermaid/</guid><description>&lt;p>title = &amp;ldquo;mermaid使用&amp;rdquo;&lt;/p>
+&lt;p>draft = true&lt;/p>
+&lt;div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+ &lt;div class="code-header language-">
+ &lt;span class="code-title">&lt;i class="arrow fas fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/span>
+ &lt;span class="ellipses">&lt;i class="fas fa-ellipsis-h fa-fw" aria-hidden="true">&lt;/i>&lt;/span>
+ &lt;span class="copy" title="Copy to clipboard">&lt;i class="far fa-copy fa-fw" aria-hidden="true">&lt;/i>&lt;/span>
+ &lt;/div>&lt;pre tabindex="0">&lt;code>&lt;/code>&lt;/pre>&lt;/div>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>&lt;a href="https://www.npmjs.com/package/mermaid" target="_blank" rel="noopener noreffer ">&lt;img
+ class="lazyload"
+ src="https://hangerlin.github.io/svg/loading.min.svg"
+ data-src="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesmermaid"
+ data-srcset="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesmermaid, https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesmermaid 1.5x, https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesmermaid 2x"
+ data-sizes="auto"
+ alt="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesmermaid"
+ title="NPM" />&lt;/a>
+&lt;a href="https://github.com/mermaid-js/mermaid/actions/workflows/build.yml" target="_blank" rel="noopener noreffer ">&lt;img
+ class="lazyload"
+ src="https://hangerlin.github.io/svg/loading.min.svg"
+ data-src="https://github.com/mermaid-js/mermaid/actions/workflows/build.yml/badge.svg"
+ data-srcset="https://github.com/mermaid-js/mermaid/actions/workflows/build.yml/badge.svg, https://github.com/mermaid-js/mermaid/actions/workflows/build.yml/badge.svg 1.5x, https://github.com/mermaid-js/mermaid/actions/workflows/build.yml/badge.svg 2x"
+ data-sizes="auto"
+ alt="https://github.com/mermaid-js/mermaid/actions/workflows/build.yml/badge.svg"
+ title="Build CI Status" />&lt;/a>
+&lt;a href="https://bundlephobia.com/package/mermaid" target="_blank" rel="noopener noreffer ">&lt;img
+ class="lazyload"
+ src="https://hangerlin.github.io/svg/loading.min.svg"
+ data-src="https://img.shields.io/bundlephobia/minzip/mermaid"
+ data-srcset="https://img.shields.io/bundlephobia/minzip/mermaid, https://img.shields.io/bundlephobia/minzip/mermaid 1.5x, https://img.shields.io/bundlephobia/minzip/mermaid 2x"
+ data-sizes="auto"
+ alt="https://img.shields.io/bundlephobia/minzip/mermaid"
+ title="npm minified gzipped bundle size" />&lt;/a>
+&lt;a href="https://app.codecov.io/github/mermaid-js/mermaid/tree/develop" target="_blank" rel="noopener noreffer ">&lt;img
+ class="lazyload"
+ src="https://hangerlin.github.io/svg/loading.min.svg"
+ data-src="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesbadge-20240428092144323.svg"
+ data-srcset="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesbadge-20240428092144323.svg, https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesbadge-20240428092144323.svg 1.5x, https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesbadge-20240428092144323.svg 2x"
+ data-sizes="auto"
+ alt="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesbadge-20240428092144323.svg"
+ title="Coverage Status" />&lt;/a>
+&lt;a href="https://www.jsdelivr.com/package/npm/mermaid" target="_blank" rel="noopener noreffer ">&lt;img
+ class="lazyload"
+ src="https://hangerlin.github.io/svg/loading.min.svg"
+ data-src="https://img.shields.io/jsdelivr/npm/hm/mermaid"
+ data-srcset="https://img.shields.io/jsdelivr/npm/hm/mermaid, https://img.shields.io/jsdelivr/npm/hm/mermaid 1.5x, https://img.shields.io/jsdelivr/npm/hm/mermaid 2x"
+ data-sizes="auto"
+ alt="https://img.shields.io/jsdelivr/npm/hm/mermaid"
+ title="CDN Status" />&lt;/a>
+&lt;a href="https://www.npmjs.com/package/mermaid" target="_blank" rel="noopener noreffer ">&lt;img
+ class="lazyload"
+ src="https://hangerlin.github.io/svg/loading.min.svg"
+ data-src="https://img.shields.io/npm/dm/mermaid"
+ data-srcset="https://img.shields.io/npm/dm/mermaid, https://img.shields.io/npm/dm/mermaid 1.5x, https://img.shields.io/npm/dm/mermaid 2x"
+ data-sizes="auto"
+ alt="https://img.shields.io/npm/dm/mermaid"
+ title="NPM Downloads" />&lt;/a>
+&lt;a href="https://discord.gg/AgrbSrBer3" target="_blank" rel="noopener noreffer ">&lt;img
+ class="lazyload"
+ src="https://hangerlin.github.io/svg/loading.min.svg"
+ data-src="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesv1"
+ data-srcset="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesv1, https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesv1 1.5x, https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesv1 2x"
+ data-sizes="auto"
+ alt="https://cdn.jsdelivr.net/gh/HangerLIN/imageBeds2@main//imagesv1"
+ title="Join our Discord!" />&lt;/a>
+&lt;a href="https://twitter.com/mermaidjs_" target="_blank" rel="noopener noreffer ">&lt;img
+ class="lazyload"
+ src="https://hangerlin.github.io/svg/loading.min.svg"
+ data-src="https://img.shields.io/badge/Social-mermaidjs__-blue?style=social&amp;amp;logo=X"
+ data-srcset="https://img.shields.io/badge/Social-mermaidjs__-blue?style=social&amp;amp;logo=X, https://img.shields.io/badge/Social-mermaidjs__-blue?style=social&amp;amp;logo=X 1.5x, https://img.shields.io/badge/Social-mermaidjs__-blue?style=social&amp;amp;logo=X 2x"
+ data-sizes="auto"
+ alt="https://img.shields.io/badge/Social-mermaidjs__-blue?style=social&amp;amp;logo=X"
+ title="Twitter Follow" />&lt;/a>&lt;/p></description></item><item><title/><link>https://hangerlin.github.io/high-performance-architecture/mysql---es-%E5%8F%8C%E5%86%99%E4%B8%80%E8%87%B4%E6%80%A7/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/mysql---es-%E5%8F%8C%E5%86%99%E4%B8%80%E8%87%B4%E6%80%A7/</guid><description>&lt;h1 id="mysql---es-双写一致性">MySQL - ES 双写一致性&lt;/h1>
+&lt;h2 id="场景引入">场景引入&lt;/h2>
+&lt;p>如果你设计了一个类似 B 站的视频网站中的搜索系统，或许在初期 MySQL 的 like 模糊搜已经能满足你对视频的标题、简介的搜索需求。&lt;/p>
+&lt;div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+ &lt;div class="code-header language-sql">
+ &lt;span class="code-title">&lt;i class="arrow fas fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/span>
+ &lt;span class="ellipses">&lt;i class="fas fa-ellipsis-h fa-fw" aria-hidden="true">&lt;/i>&lt;/span>
+ &lt;span class="copy" title="Copy to clipboard">&lt;i class="far fa-copy fa-fw" aria-hidden="true">&lt;/i>&lt;/span>
+ &lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">videos&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">title&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">LIKE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;%&amp;#39;&lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="n">search_term&lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="s1">&amp;#39;%&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">OR&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">description&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">LIKE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;%&amp;#39;&lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="n">search_term&lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="s1">&amp;#39;%&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;p>如果后期系统视频的量级上来了，对性能有一定要求了，你或许已经开始考虑 ES 了。后面如果你还想让与搜索关键词相关的创作者名称、视频评论、关联标签也能级联视频搜出来，甚至弄一个各种业务维度的融合公式，那么 ES 这样的搜索引擎再适合不过了！&lt;/p></description></item><item><title/><link>https://hangerlin.github.io/high-performance-architecture/%E4%B8%8A%E9%9B%86%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8Fhandler%E7%9A%84%E8%AE%BE%E8%AE%A1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/%E4%B8%8A%E9%9B%86%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8Fhandler%E7%9A%84%E8%AE%BE%E8%AE%A1/</guid><description>&lt;p>&lt;a href="https://chatgpt.com/c/8d43672d-5f08-4a44-bdb4-04d82972e93b?model=gpt-4" target="_blank" rel="noopener noreffer ">https://chatgpt.com/c/8d43672d-5f08-4a44-bdb4-04d82972e93b?model=gpt-4&lt;/a>&lt;/p>
+&lt;h3 id="上集策略模式handler的设计">上集：策略模式Handler的设计&lt;/h3>
+&lt;h4 id="1-引言">1. 引言&lt;/h4>
+&lt;ul>
+&lt;li>介绍策略模式的定义和作用&lt;/li>
+&lt;li>简述在OA系统中的应用背景&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-oa系统中策略模式的总体设计">2. OA系统中策略模式的总体设计&lt;/h4>
+&lt;ul>
+&lt;li>解释策略模式在OA系统中的架构设计&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-officeautomationservice类的设计">3. OfficeAutomationService类的设计&lt;/h4>
+&lt;ul>
+&lt;li>介绍OfficeAutomationService类的作用
+&lt;ul>
+&lt;li>服务层的职责&lt;/li>
+&lt;li>Handler的管理和获取&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>维护的Map对象
+&lt;ul>
+&lt;li>&lt;code>private final Map&amp;lt;OfficeAutomationHandlerType, OfficeAutomationHandler&amp;gt; officeAutomationHandlers;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>构造方法的设计
+&lt;ul>
+&lt;li>&lt;code>public OfficeAutomationService(List&amp;lt;OfficeAutomationHandler&amp;gt; officeAutomationList, List&amp;lt;MongoRepository&amp;gt; mongoRepositories)&lt;/code>&lt;/li>
+&lt;li>通过&lt;code>stream&lt;/code>和&lt;code>Collectors.toMap&lt;/code>收集Handler&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="4-officeautomationhandler的设计">4. OfficeAutomationHandler的设计&lt;/h4>
+&lt;ul>
+&lt;li>介绍OfficeAutomationHandler类
+&lt;ul>
+&lt;li>抽象类的定义&lt;/li>
+&lt;li>关键方法及其作用&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>详细描述各个方法的实现和调用流程&lt;/li>
+&lt;/ul>
+&lt;h4 id="5-officeautomationhandler中依赖的注入">5. OfficeAutomationHandler中依赖的注入&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>描述MongoTemplate、PlatformUserService、ApprovalRecordService等依赖的注入和作用&lt;/p></description></item><item><title/><link>https://hangerlin.github.io/high-performance-architecture/%E4%B8%8A%E9%9B%86%E7%B3%BB%E7%BB%9F%E5%90%8C%E6%AD%A5%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/%E4%B8%8A%E9%9B%86%E7%B3%BB%E7%BB%9F%E5%90%8C%E6%AD%A5%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96/</guid><description>&lt;p>title = &amp;ldquo;（一）高效异步：利用消息队列优化大规模Excel文件下载&amp;rdquo;&lt;/p>
+&lt;p>date = 2024-04-28T17:43:19+08:00&lt;/p>
+&lt;p>draft = true&lt;/p>
+&lt;h3 id="上集系统同步设计与初始化">上集：系统同步设计与初始化&lt;/h3>
+&lt;p>&lt;strong>1. 引言&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>介绍新旧系统并行运行的背景，说明为何需要同步旧系统数据到新系统，防止数据冲突。&lt;/li>
+&lt;li>简述使用的技术和服务，如 &lt;code>AsyncDataSynchronizeService&lt;/code> 和 &lt;code>SCNUXLJYDatabase&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>2. 系统架构概览&lt;/strong>&lt;/p></description></item><item><title/><link>https://hangerlin.github.io/high-performance-architecture/%E4%BA%86%E8%A7%A3%E4%BA%86%E8%BF%99%E9%87%8C%E6%98%AF%E7%BB%BC%E5%90%88%E4%B8%A4%E7%AF%87%E6%96%87%E7%AB%A0%E4%B8%AD%E5%85%B3%E4%BA%8E%E8%A7%A3%E5%86%B3%E6%B7%B1%E5%BA%A6%E5%88%86%E9%A1%B5%E9%97%AE%E9%A2%98%E7%9A%84%E7%AD%96%E7%95%A5%E5%BD%A2%E6%88%90%E7%9A%84%E4%B8%80%E4%BB%BD%E5%A4%A7%E7%BA%B2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/%E4%BA%86%E8%A7%A3%E4%BA%86%E8%BF%99%E9%87%8C%E6%98%AF%E7%BB%BC%E5%90%88%E4%B8%A4%E7%AF%87%E6%96%87%E7%AB%A0%E4%B8%AD%E5%85%B3%E4%BA%8E%E8%A7%A3%E5%86%B3%E6%B7%B1%E5%BA%A6%E5%88%86%E9%A1%B5%E9%97%AE%E9%A2%98%E7%9A%84%E7%AD%96%E7%95%A5%E5%BD%A2%E6%88%90%E7%9A%84%E4%B8%80%E4%BB%BD%E5%A4%A7%E7%BA%B2/</guid><description>&lt;p>了解了！这里是综合两篇文章中关于解决深度分页问题的策略，形成的一份大纲：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>业务规模与数据量理解&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>识别业务的规模和数据增长趋势。&lt;/li>
+&lt;li>预测未来数据量，根据预测结果设计数据库架构。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>数据库分库分表&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>根据数据量和查询需求进行分库分表。&lt;/li>
+&lt;li>选择合适的分表键，如用户ID或日期，确保查询效率。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>索引优化策略&lt;/strong>：&lt;/p></description></item><item><title/><link>https://hangerlin.github.io/high-performance-architecture/%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%88%86%E9%A1%B5%E4%BC%98%E5%8C%96%E5%88%B0%E5%8F%8C%E5%86%99%E5%BC%82%E6%AD%A5%E5%90%8C%E6%AD%A5%E6%9E%84%E7%AD%91%E9%AB%98%E6%80%A7%E8%83%BD%E5%A4%A7%E8%A7%84%E6%A8%A1%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2%E6%9E%B6%E6%9E%84-draft/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%88%86%E9%A1%B5%E4%BC%98%E5%8C%96%E5%88%B0%E5%8F%8C%E5%86%99%E5%BC%82%E6%AD%A5%E5%90%8C%E6%AD%A5%E6%9E%84%E7%AD%91%E9%AB%98%E6%80%A7%E8%83%BD%E5%A4%A7%E8%A7%84%E6%A8%A1%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2%E6%9E%B6%E6%9E%84-draft/</guid><description>&lt;p>ES在项目中的实现：&lt;a href="https://chat.openai.com/c/476fa79e-f74f-4bbf-9226-b3970e3f0128" target="_blank" rel="noopener noreffer ">ChatGPT (openai.com)&lt;/a>&lt;/p>
+&lt;p>数据库分表策略：https://chat.openai.com/c/48add59c-ce6e-4aa5-940d-bea5fc33ee09&lt;/p>
+&lt;p>ES同步VS异步：https://chat.openai.com/c/62d58351-2ced-4eca-97ea-709a7a891261&lt;/p></description></item><item><title/><link>https://hangerlin.github.io/high-performance-architecture/%E5%8D%9A%E5%AE%A2%E5%A4%A7%E7%BA%B2ip%E7%99%BD%E5%90%8D%E5%8D%95%E6%8B%A6%E6%88%AA%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/%E5%8D%9A%E5%AE%A2%E5%A4%A7%E7%BA%B2ip%E7%99%BD%E5%90%8D%E5%8D%95%E6%8B%A6%E6%88%AA%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</guid><description>&lt;p>为了撰写一篇关于&lt;code>IPWhiteListInterceptor&lt;/code>的设计和实现的博客，你可以依据以下大纲来结构化内容，详细介绍该拦截器如何工作，它的设计理念，以及它在保护Web应用安全中的作用。&lt;/p>
+&lt;h3 id="博客大纲ip白名单拦截器的设计与实现">博客大纲：IP白名单拦截器的设计与实现&lt;/h3>
+&lt;h4 id="1-引言">1. 引言&lt;/h4>
+&lt;ul>
+&lt;li>简介：解释拦截器的作用和在现代Web应用中的重要性。&lt;/li>
+&lt;li>目的：讨论使用IP白名单增强应用安全性的必要性。&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-拦截器的设计理念">2. 拦截器的设计理念&lt;/h4>
+&lt;ul>
+&lt;li>设计目标：确保只有特定的、受信任的IP地址可以访问敏感的Web接口。&lt;/li>
+&lt;li>技术选型：为什么选择Spring的&lt;code>HandlerInterceptor&lt;/code>作为实现基础。&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-实现细节">3. 实现细节&lt;/h4>
+&lt;ul>
+&lt;li>IP白名单的初始化
+&lt;ul>
+&lt;li>如何存储和管理IP地址。&lt;/li>
+&lt;li>代码演示：初始化IP地址集合。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>请求拦截逻辑
+&lt;ul>
+&lt;li>使用反射检查注解。&lt;/li>
+&lt;li>判断处理器（handler）类型。&lt;/li>
+&lt;li>代码演示：获取方法注解和判断IP是否在白名单内。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>构建安全响应
+&lt;ul>
+&lt;li>如何处理不在白名单内的请求。&lt;/li>
+&lt;li>代码演示：构造错误响应并发送给客户端。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="4-异常处理">4. 异常处理&lt;/h4>
+&lt;ul>
+&lt;li>如何处理可能出现的异常。&lt;/li>
+&lt;li>代码演示：异常捕获和处理。&lt;/li>
+&lt;/ul>
+&lt;h4 id="5-性能考虑">5. 性能考虑&lt;/h4>
+&lt;ul>
+&lt;li>拦截器对系统性能的影响。&lt;/li>
+&lt;li>如何优化以减少性能损耗。&lt;/li>
+&lt;/ul>
+&lt;h4 id="6-安全性分析">6. 安全性分析&lt;/h4>
+&lt;ul>
+&lt;li>拦截器在防止未授权访问中的作用。&lt;/li>
+&lt;li>讨论潜在的安全漏洞和如何避免。&lt;/li>
+&lt;/ul>
+&lt;h4 id="7-扩展性和维护">7. 扩展性和维护&lt;/h4>
+&lt;ul>
+&lt;li>如何添加或移除IP地址。&lt;/li>
+&lt;li>管理和维护IP白名单的最佳实践。&lt;/li>
+&lt;/ul>
+&lt;h4 id="8-总结">8. 总结&lt;/h4>
+&lt;ul>
+&lt;li>重申IP白名单拦截器的重要性和实际应用。&lt;/li>
+&lt;li>调用行动：鼓励读者实施类似的安全措施。&lt;/li>
+&lt;/ul>
+&lt;h4 id="9-附录">9. 附录&lt;/h4>
+&lt;ul>
+&lt;li>参考文献&lt;/li>
+&lt;li>相关工具和资源链接&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-引言-1">1. 引言&lt;/h3>
+&lt;p>在现代Web应用中，拦截器（Interceptor）扮演了一个至关重要的角色，它能够在请求处理的前后进行拦截并执行特定操作。这使得拦截器成为实现横切关注点（如安全性、日志记录、数据校验等）的理想选择。通过拦截器，开发者可以在不修改业务逻辑代码的情况下，增加额外的处理逻辑。&lt;/p></description></item><item><title/><link>https://hangerlin.github.io/high-performance-architecture/%E7%9B%AE%E6%A0%87/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/%E7%9B%AE%E6%A0%87/</guid><description>&lt;h2 id="目标">目标&lt;/h2>
+&lt;h4 id="学英文流利的表达">学英文：流利的表达&lt;/h4>
+&lt;h4 id="技术栈">技术栈&lt;/h4>
+&lt;p>前端：React Next.js TypeScript&lt;/p>
+&lt;p>云服务：AWS 服务&lt;/p>
+&lt;p>对接 GPT-4 API&lt;/p>
+&lt;p>PHP、JS、Python、C++（GL、OpenGL）&amp;mdash;&amp;ndash; 数学、物理、算法&lt;/p>
+&lt;p>Java（虽然说技术栈：SSM、ELK、Minio：源码分析）&lt;/p></description></item><item><title/><link>https://hangerlin.github.io/high-performance-architecture/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F-%E4%B8%8A/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F-%E4%B8%8A/</guid><description>&lt;p>&lt;a href="https://chatgpt.com/c/9878e17a-9a78-4476-8565-08b8c5244baf" target="_blank" rel="noopener noreffer ">https://chatgpt.com/c/9878e17a-9a78-4476-8565-08b8c5244baf&lt;/a>&lt;/p>
+&lt;h3 id="1-引言">1. 引言&lt;/h3>
+&lt;p>在现代软件开发中，设计模式不仅提高了代码的可读性和可维护性，还帮助开发者在面对复杂问题时找到优雅的解决方案。策略模式是这些模式之一，它尤其擅长处理需要在运行时根据条件选择不同算法或流程的情况。&lt;/p></description></item><item><title/><link>https://hangerlin.github.io/high-performance-architecture/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F-%E4%B8%8D%E5%90%8Cfilter%E7%9A%84%E8%AE%BE%E8%AE%A1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F-%E4%B8%8D%E5%90%8Cfilter%E7%9A%84%E8%AE%BE%E8%AE%A1/</guid><description>&lt;h1 id="策略模式-不同filter的设计">策略模式-不同filter的设计&lt;/h1>
+&lt;p>+++
+title = &amp;ldquo;策略模式-不同filter的设计&amp;rdquo;&lt;/p>
+&lt;p>date = 2024-04-28T17:43:19+08:00&lt;/p>
+&lt;p>draft = true&lt;/p>
+&lt;p>+++&lt;/p>
+&lt;div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+ &lt;div class="code-header language-java">
+ &lt;span class="code-title">&lt;i class="arrow fas fa-angle-right fa-fw" aria-hidden="true">&lt;/i>&lt;/span>
+ &lt;span class="ellipses">&lt;i class="fas fa-ellipsis-h fa-fw" aria-hidden="true">&lt;/i>&lt;/span>
+ &lt;span class="copy" title="Copy to clipboard">&lt;i class="far fa-copy fa-fw" aria-hidden="true">&lt;/i>&lt;/span>
+ &lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="cm">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * 批量导出新生录取数据
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * @param admissionInformationRO
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * @return
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Boolean&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">batchExportAdmissionInformationByAllRoles&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">AdmissionInformationRO&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">admissionInformationRO&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">List&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">roleList&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">StpUtil&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">getRoleList&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">userId&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">StpUtil&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">getLoginIdAsString&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">roleList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">isEmpty&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">log&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ResultCode&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">ROLE_INFO_FAIL1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">getMessage&lt;/span>&lt;span class="p">());&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">else&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">roleList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">contains&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">SECOND_COLLEGE_ADMIN&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">getRoleName&lt;/span>&lt;span class="p">()))&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 二级学院管理员&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">CollegeInformationPO&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">userBelongCollege&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">scnuXueliTools&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">getUserBelongCollege&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">PageRO&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">AdmissionInformationRO&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">pageVO&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">PageRO&lt;/span>&lt;span class="o">&amp;lt;&amp;gt;&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">admissionInformationRO&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">setCollege&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">userBelongCollege&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">getCollegeName&lt;/span>&lt;span class="p">());&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">pageVO&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">setEntity&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">admissionInformationRO&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kt">boolean&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">send&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">messageSender&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">sendExportMsg&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">pageVO&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">managerFilter&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">userId&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">send&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">else&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">roleList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">contains&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">XUELIJIAOYUBU_ADMIN&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">getRoleName&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">roleList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">contains&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">CAIWUBU_ADMIN&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">getRoleName&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">roleList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">contains&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ADMISSION_ADMIN&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">getRoleName&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 继续教育学院管理员&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">PageRO&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">AdmissionInformationRO&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">pageVO&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">PageRO&lt;/span>&lt;span class="o">&amp;lt;&amp;gt;&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">pageVO&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">setEntity&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">admissionInformationRO&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kt">boolean&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">send&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">messageSender&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">sendExportMsg&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">pageVO&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">managerFilter&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">userId&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">send&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">else&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">roleList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">contains&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">TEACHING_POINT_ADMIN&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">getRoleName&lt;/span>&lt;span class="p">()))&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 继续教育学院管理员&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">PageRO&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">AdmissionInformationRO&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">pageVO&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">PageRO&lt;/span>&lt;span class="o">&amp;lt;&amp;gt;&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">admissionInformationRO&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">setTeachingPoint&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">scnuXueliTools&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">getUserBelongTeachingPoint&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="na">getTeachingPointName&lt;/span>&lt;span class="p">());&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">pageVO&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">setEntity&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">admissionInformationRO&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kt">boolean&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">send&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">messageSender&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">sendExportMsg&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">pageVO&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">managerFilter&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">userId&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">send&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;p>&lt;a href="https://chat.openai.com/c/f916825e-7905-4161-b13e-138d909ebd76" target="_blank" rel="noopener noreffer ">https://chat.openai.com/c/f916825e-7905-4161-b13e-138d909ebd76&lt;/a>&lt;/p></description></item><item><title/><link>https://hangerlin.github.io/high-performance-architecture/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F-%E4%B8%AD/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F-%E4%B8%AD/</guid><description>&lt;h3 id="1-数据库po表设计">1. 数据库PO表设计&lt;/h3>
+&lt;h4 id="1-approvalrecordpo审批记录">1. ApprovalRecordPO（审批记录）&lt;/h4>
+&lt;p>&lt;img
+ class="lazyload"
+ src="https://hangerlin.github.io/svg/loading.min.svg"
+ data-src="./assets/%28null%29-20240607135315709.%28null%29"
+ data-srcset="./assets/%28null%29-20240607135315709.%28null%29, ./assets/%28null%29-20240607135315709.%28null%29 1.5x, ./assets/%28null%29-20240607135315709.%28null%29 2x"
+ data-sizes="auto"
+ alt="./assets/(null)-20240607135315709.(null)"
+ title="img" />&lt;/p>
+&lt;p>&lt;img
+ class="lazyload"
+ src="https://hangerlin.github.io/svg/loading.min.svg"
+ data-src="./assets/image-20240607135722829.png"
+ data-srcset="./assets/image-20240607135722829.png, ./assets/image-20240607135722829.png 1.5x, ./assets/image-20240607135722829.png 2x"
+ data-sizes="auto"
+ alt="./assets/image-20240607135722829.png"
+ title="image-20240607135722829" />&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>id&lt;/code>：自增的主键 ID。&lt;/li>
+&lt;li>&lt;code>approvalTypeId&lt;/code>：审批类型的 ID。&lt;/li>
+&lt;li>&lt;code>initiatorUsername&lt;/code>：发起人的用户名。&lt;/li>
+&lt;li>&lt;code>createdAt&lt;/code>：审批发起的时间。&lt;/li>
+&lt;li>&lt;code>updateAt&lt;/code>：记录最后更新的时间。&lt;/li>
+&lt;li>&lt;code>currentStepId&lt;/code>：当前步骤的 ID。&lt;/li>
+&lt;li>&lt;code>status&lt;/code>：审批的状态，包括 &lt;code>waiting&lt;/code>（正在审批）、&lt;code>success&lt;/code>（成功）、&lt;code>failed&lt;/code>（失败）。&lt;/li>
+&lt;li>&lt;code>documentId&lt;/code>：关联的审核表单 ID，存储在 MongoDB 中。&lt;/li>
+&lt;li>&lt;code>watchUsernameSet&lt;/code>：可以查看此记录的用户名集合，使用自定义的 &lt;code>StringSetTypeHandler&lt;/code> 类型处理器。&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-approvalsteppo审批步骤">2. ApprovalStepPO（审批步骤）&lt;/h4>
+&lt;p>&lt;img
+ class="lazyload"
+ src="https://hangerlin.github.io/svg/loading.min.svg"
+ data-src="./assets/%28null%29-20240607135315971.%28null%29"
+ data-srcset="./assets/%28null%29-20240607135315971.%28null%29, ./assets/%28null%29-20240607135315971.%28null%29 1.5x, ./assets/%28null%29-20240607135315971.%28null%29 2x"
+ data-sizes="auto"
+ alt="./assets/(null)-20240607135315971.(null)"
+ title="img" />&lt;/p></description></item><item><title/><link>https://hangerlin.github.io/high-performance-architecture/%E7%B3%BB%E7%BB%9F%E6%B6%88%E6%81%AF%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/%E7%B3%BB%E7%BB%9F%E6%B6%88%E6%81%AF%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</guid><description>&lt;p>&lt;a href="https://chatgpt.com/c/b47f7b9a-6051-489b-a88a-7f73eba39b9a" target="_blank" rel="noopener noreffer ">https://chatgpt.com/c/b47f7b9a-6051-489b-a88a-7f73eba39b9a&lt;/a>&lt;/p>
+&lt;p>&lt;strong>高效公告管理与数据一致性保障系统&lt;/strong>&lt;br>
+使用Redis的发布订阅模式快速处理公告通知，结合消息队列与MySQL确保数据的异步持久化和精准验证。&lt;/p>
+&lt;div class="mermaid" id="id-1">&lt;/div>&lt;p>为了撰写关于高效公告管理与数据一致性保障系统的两部分博文，这里是一个详细的博文大纲，分别对应上下集内容：&lt;/p>
+&lt;h3 id="上集高效公告管理系统设计">上集：高效公告管理系统设计&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>引言&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>简述系统的设计目的和核心价值：实时公告发布与快速响应。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>架构概览&lt;/strong>&lt;/p></description></item><item><title/><link>https://hangerlin.github.io/high-performance-architecture/%E4%B8%89%E6%B7%B1%E5%BA%A6%E5%88%86%E9%A1%B5%E7%B4%A2%E5%BC%95+%E4%B8%BB%E4%BB%8E%E5%88%86%E7%A6%BB%E6%8F%90%E5%8D%87%E6%95%B0%E6%8D%AE%E5%BA%93%E6%80%A7%E8%83%BD/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/%E4%B8%89%E6%B7%B1%E5%BA%A6%E5%88%86%E9%A1%B5%E7%B4%A2%E5%BC%95+%E4%B8%BB%E4%BB%8E%E5%88%86%E7%A6%BB%E6%8F%90%E5%8D%87%E6%95%B0%E6%8D%AE%E5%BA%93%E6%80%A7%E8%83%BD/</guid><description>&lt;h1 id="深度分页优化到双写异步同步构筑高性能大规模数据查询架构">深度分页优化到双写异步同步：构筑高性能大规模数据查询架构&lt;/h1>
+&lt;h2 id="0-文章前言">0. 文章前言&lt;/h2>
+&lt;h3 id="初衷">初衷&lt;/h3>
+&lt;p>本章节旨在解决大型在线教育平台面临的一个常见但棘手的技术挑战——深度分页问题，以及如何有效地通过使用Canal和消息队列异步同步MySQL数据到Elasticsearch。笔者目的是提供一套实用的解决方案，以帮助开发者和架构师优化数据查询性能，减少系统的响应时间，从而提升用户的体验和满意度。&lt;/p></description></item><item><title/><link>https://hangerlin.github.io/high-performance-architecture/%E4%BA%94%E6%95%B0%E6%8D%AE%E8%AE%A2%E9%98%85canal%E5%B0%81%E8%A3%85%E8%A7%A3%E8%80%A6%E6%95%B0%E6%8D%AE%E5%8F%98%E6%9B%B4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/%E4%BA%94%E6%95%B0%E6%8D%AE%E8%AE%A2%E9%98%85canal%E5%B0%81%E8%A3%85%E8%A7%A3%E8%80%A6%E6%95%B0%E6%8D%AE%E5%8F%98%E6%9B%B4/</guid><description>&lt;h1 id="五订阅解耦借助canal实现数据变更">（五）订阅解耦：借助Canal实现数据变更&lt;/h1>
+&lt;h3 id="1-引言">1. 引言&lt;/h3>
+&lt;p>在我们之前的讨论中，我们深入探索了几个关键的数据库问题，其中包括解决MySQL的深度分页问题以及同步MySQL数据到Elasticsearch的策略。这些讨论不仅揭示了直接同步方法的限制，也突出了异步解决方案的多样性和有效性，为处理大量数据提供了可行性和灵活性。&lt;/p></description></item><item><title/><link>https://hangerlin.github.io/high-performance-architecture/%E5%85%AD%E6%99%BA%E8%83%BD%E5%8C%96%E9%80%9A%E7%9F%A5%E5%8D%95%E7%94%9F%E6%88%90apache-poi%E8%BF%9B%E8%A1%8Cword%E6%96%87%E6%A1%A3%E6%95%B0%E6%8D%AE%E5%A1%AB%E5%85%85/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/%E5%85%AD%E6%99%BA%E8%83%BD%E5%8C%96%E9%80%9A%E7%9F%A5%E5%8D%95%E7%94%9F%E6%88%90apache-poi%E8%BF%9B%E8%A1%8Cword%E6%96%87%E6%A1%A3%E6%95%B0%E6%8D%AE%E5%A1%AB%E5%85%85/</guid><description>&lt;h1 id="文档填充术使用apache-poi实现word字段精准数据填充">文档填充术：使用Apache POI实现Word字段精准数据填充&lt;/h1>
+&lt;h3 id="引言">引言&lt;/h3>
+&lt;p>在现代软件开发实践中，自动化文档处理已成为提高效率和准确性的关键手段。无论是生成报告、发票还是个性化的通信文件，自动化都能显著减少重复性劳动并增加生产力。为了实现这一目标，Apache POI库提供了一套强大的工具，使得Java开发者能够轻松创建、修改和显示MS Office文档。本文将探讨如何利用Apache POI进行高效的Word文档数据填充，特别是在企业级应用中处理大量文档时的优化技术。&lt;/p></description></item><item><title/><link>https://hangerlin.github.io/high-performance-architecture/%E5%9B%9B%E5%8F%8C%E5%86%99%E4%B8%80%E8%87%B4%E6%80%A7es%E4%B8%8Emysql%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5%E7%9A%84%E7%9B%B4%E6%8E%A5%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%BC%82%E6%AD%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://hangerlin.github.io/high-performance-architecture/%E5%9B%9B%E5%8F%8C%E5%86%99%E4%B8%80%E8%87%B4%E6%80%A7es%E4%B8%8Emysql%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5%E7%9A%84%E7%9B%B4%E6%8E%A5%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%BC%82%E6%AD%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid><description>&lt;h1 id="四双写一致性es与mysql数据同步的直接同步与异步解决方案">（四）&lt;strong>双写一致性：ES与MySQL数据同步的直接同步与异步解决方案&lt;/strong>&lt;/h1>
+&lt;h3 id="1-引言">&lt;strong>1. 引言&lt;/strong>&lt;/h3>
+&lt;p>在我们上一篇讨论中，我们探讨了如何解决深度分页问题，尤其是在大规模数据集合中进行高效查询的挑战。然而，尽管对MySQL进行了优化，这些改进仍然无法完全满足我们对海量数据查询的需求，特别是在面对如学生成绩检索，或者文档中关键字搜索等复杂查询（未来需求）时。这促使我们考虑引入Elasticsearch（ES）。&lt;/p></description></item></channel></rss>
