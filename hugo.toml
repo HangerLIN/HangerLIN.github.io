@@ -161,9 +161,9 @@ summaryLength = 100
       [params.page.comment.giscus]
         enable = true
         repo = "HangerLIN/HangerLIN.github.io"
-        repoId = ""
+        repoId = "R_kgDOLQIClw"
         category = "Announcements"
-        categoryId = ""
+        categoryId = "DIC_kwDOLQICl84Cd7l2"
         mapping = "pathname"
         term = ""
         strict = "0"
